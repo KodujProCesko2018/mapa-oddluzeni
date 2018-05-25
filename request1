@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://isirpublicws.cca.cz/types/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:getIsirWsPublicIdDataRequest>
+         <idPodnetu>%ID%</idPodnetu>
+      </typ:getIsirWsPublicIdDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
