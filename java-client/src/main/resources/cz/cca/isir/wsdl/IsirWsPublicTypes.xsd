@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://isirpublicws.cca.cz/types/" xmlns="http://isirpublicws.cca.cz/types/">
+    
+    <xsd:element name="getIsirWsPublicIdDataRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="idPodnetu" type="xsd:long" nillable="false" minOccurs="1" maxOccurs="1" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="getIsirWsPublicDataResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="data" type="isirWsPublicData" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="status" type="isirWsPublicStatus" nillable="false" minOccurs="1" maxOccurs="1" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:complexType name="isirWsPublicData">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:long" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="datumZalozeniUdalosti" type="xsd:dateTime" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="datumZverejneniUdalosti" type="xsd:dateTime" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="dokumentUrl" type="xsd:string" nillable="false" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="spisovaZnacka" type="xsd:string" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="typUdalosti" type="xsd:string" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="popisUdalosti" type="xsd:string" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="oddil" type="xsd:string" nillable="false" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="cisloVOddilu" type="xsd:int" nillable="false" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="poznamka" type="xsd:string" nillable="false" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="isirWsPublicStatus">
+        <xsd:sequence>
+            <xsd:element name="stav" type="stavType" nillable="false" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="kodChyby" type="kodChybyType" nillable="false" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="popisChyby" type="xsd:string" nillable="false" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="stavType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="OK" />
+            <xsd:enumeration value="CHYBA" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="kodChybyType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="WS1" />      <!-- Neznama verze poznamky -->
+            <xsd:enumeration value="WS2" />      <!-- Chyba pri generovani poznamky -->
+            <xsd:enumeration value="SERVER1" />  <!-- Chyba aplikace -->
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+</xsd:schema>
