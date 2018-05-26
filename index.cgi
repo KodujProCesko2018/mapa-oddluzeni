@@ -7,6 +7,14 @@ import cgi
 import json
 import sqlite3
 
+def getInfo(bcVec,rocnik):
+    response = requests.get('https://vitek.baisa.net/insolvence/soap2.cgi?bcVec=%s&rocnik=%s' %(bcVec,rocnik), auth=('insolv', 'bankrot'))
+    root = ET.fromstring(response.text)
+    data = {}
+    for child in root[0][0][0]:
+        data[child.tag] = child.text
+    return data
+
 class Insolvence():
     def __init__(self):
         pass
@@ -46,11 +54,3 @@ class Insolvence():
 
 if __name__ == '__main__':
     Insolvence().serve()
-
-def getInfo(bcVec,rocnik):
-    response = requests.get('https://vitek.baisa.net/insolvence/soap2.cgi?bcVec=%s&rocnik=%s' %(bcVec,rocnik), auth=('insolv', 'bankrot'))
-    root = ET.fromstring(response.text)
-    data = {}
-    for child in root[0][0][0]:
-        data[child.tag] = child.text
-    return data
