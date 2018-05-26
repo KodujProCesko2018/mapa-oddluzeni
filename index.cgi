@@ -48,17 +48,9 @@ if __name__ == '__main__':
     Insolvence().serve()
 
 def getInfo(bcVec,rocnik):
-    wsdl = 'https://isir.justice.cz:8443/isir_cuzk_ws/IsirWsCuzkService?wsdl'
-    client = zeep.Client(wsdl=wsdl)
-    response = client.service.getIsirWsCuzkData(bcVec=bcVec,rocnik=rocnik)
-    response['data'][0]['rc'] = response['data'][0]['rc'].replace("/", "")
-    response['data'][0]['datumNarozeni'] = response['data'][0]['datumNarozeni'][:4]
-    return response['data'][0]
-
-def writeInfo(response,rocnik):
-    conOut = sqlite3.connect('output.db',detect_types=sqlite3.PARSE_DECLTYPES)
-    curOut = conOut.cursor()
-    rc = response['data'][0]['rc'].replace("/", "")
-    curIn.execute('''INSERT INTO rok%s (rc, jmeno, prijmeni, rokNarozeni, mesto, okres, psc)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s)''' 
-                        %(rocnik, rc, response['data'][0]['jmeno'], response['data'][0]['nazevOsoby'], response['data'][0]['datumNarozeni'], response['data'][0]['mesto'], response['data'][0]['okres'], response['data'][0]['psc']))
+    response = requests.get('https://vitek.baisa.net/insolvence/soap2.cgi?bcVec=%s&rocnik=%s' %(bcVec,rocnik), auth=('insolv', 'bankrot'))
+    root = ET.fromstring(response.text)
+    data = {}
+    for child in root[0][0][0]:
+        data[child.tag] = child.text
+    return data
