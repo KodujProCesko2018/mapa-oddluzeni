@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.cca.cz/isir/poznamka" xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://www.cca.cz/isir/poznamka">
+
+    <annotation>
+        <documentation>Udaje o poznamce</documentation>
+    </annotation>
+    
+    <element name="udalost" type="tns:udalostComplexType"/>
+
+    <complexType name="udalostComplexType">
+        <annotation>
+            <documentation>Popisuje samotnou udalost, se kterou akce souvisi</documentation>
+        </annotation>
+        <sequence>
+            <element name="idOsobyPuvodce" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="datumUdalostZrusena" type="dateTime" maxOccurs="1" minOccurs="0"/>
+            <element name="vec" type="tns:vecComplexType" maxOccurs="1" minOccurs="0"/>
+            <element name="osoba" type="tns:osobaComplexType" maxOccurs="1" minOccurs="0"/>
+            <element name="cisUdalost" type="tns:cisUdalostComplexType" maxOccurs="1" minOccurs="0"/>
+            <element name="poznamkaXSD" type="tns:poznamkaXSDComplexType" maxOccurs="1" minOccurs="0"/>
+            <element name="obecnyText" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="datumPravniMoci" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="priznakAnVedlejsiUdalost" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="priznakAnVedlejsiDokument" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="bcVecHlavni" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="druhVecHlavni" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="rocnikHlavni" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="datumSpojeni" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="datumOddeleni" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="druhOddilPrihl" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="cisloOddiluPrihl" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="osobaVeritel" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="priznakPlatnyVeritel" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="priznakMylnyZapisVeritelPohled" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="datumUstanoveniSpravce" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="datumZverejneniOpraveneUdalosti" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="datumVyskrtnuti" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="bcVecVsNs" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="druhVecVsNs" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="rocnikVsNs" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="senatVsNs" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="bcVecICm" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="druhVecICm" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="rocnikICm" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="senatICm" type="unsignedInt" maxOccurs="1" minOccurs="0"/>
+            <element name="idOsoby1" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="idOsoby2" type="string" maxOccurs="1" minOccurs="0"/>
+        </sequence>
+        <attribute name="verzeXsd" type="string"/>
+    </complexType>
+
+    <complexType name="vecComplexType">
+        <sequence>
+            <element name="druhStavRizeni" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="datumVecZrusena" type="dateTime" maxOccurs="1" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="osobaComplexType">
+        <sequence>
+            <element name="idOsoby" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="druhRoleVRizeni" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="druhSpravce" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="nazevOsoby" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="nazevOsobyObchodni" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="druhOsoby" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="druhPravniForma" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="jmeno" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="titulPred" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="titulZa" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="ic" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="dic" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="rc" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="datumOsobaVeVeciZrusena" type="dateTime" maxOccurs="1" minOccurs="0"/>
+            <element name="adresa" type="tns:adresaComplexType" maxOccurs="1" minOccurs="0"/>
+            <element name="datumNarozeni" type="date" maxOccurs="1" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="adresaComplexType">
+        <sequence>
+            <element name="druhAdresy" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="datumPobytOd" type="date" maxOccurs="1" minOccurs="1"/>
+            <element name="datumPobytDo" type="date" maxOccurs="1" minOccurs="0"/>
+            <element name="mesto" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="ulice" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="cisloPopisne" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="okres" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="zeme" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="psc" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="telefon" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="fax" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="textAdresy" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="idAdresy" type="string" maxOccurs="1" minOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="cisUdalostComplexType">
+        <annotation>
+            <documentation>Popisuje zmeny v ciselniku udalosti</documentation>
+        </annotation>
+        <sequence>
+            <element name="idCisUdalostiProWs" type="int" maxOccurs="1" minOccurs="1"/>
+            <element name="popisCisUdalosti" type="string" maxOccurs="1" minOccurs="1"/>
+            <element name="popisZmeny" type="string" maxOccurs="1" minOccurs="0"/>
+            <element name="datumZalozeniCisUdalosti" type="dateTime" maxOccurs="1" minOccurs="0"/>
+            <element name="datumZruseniCisUdalosti" type="dateTime" maxOccurs="1" minOccurs="0"/>
+            <element name="priznakAnInterniCisUdalost" type="string" maxOccurs="1" minOccurs="1"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="poznamkaXSDComplexType">
+        <annotation>
+            <documentation>Popisuje zmenu formatu poznamky</documentation>
+        </annotation>
+        <sequence>
+            <element name="datumPlatiOd" type="dateTime">
+                <annotation>
+                    <documentation>Datum, od ktereho nova poznamka plati</documentation>
+                </annotation>
+            </element>
+            <element name="URI" type="string">
+                <annotation>
+                    <documentation>URI adresa XSD dokumentu nove poznamky</documentation>
+                </annotation>
+            </element>
+            <element name="popisZmeny" type="string">
+                <annotation>
+                    <documentation>
+                        Popis zmeny formatu poznamky - ceho se zmena tyka, jaky ma zmena
+                        dopad na prenasena data (strukturu a vyznam prenasenych dat)
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+</schema>

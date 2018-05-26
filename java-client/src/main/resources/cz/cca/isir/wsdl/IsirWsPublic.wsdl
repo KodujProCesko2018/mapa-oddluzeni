@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://isirpublicws.cca.cz/" name="IsirWsPublicService"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:tns="http://isirpublicws.cca.cz/"
+                  xmlns:types="http://isirpublicws.cca.cz/types/">
+        
+    <wsdl:documentation>IsirPublicWS</wsdl:documentation>
+    
+    <!-- Definice dat (XSD) -->
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://isirpublicws.cca.cz/types/" schemaLocation="IsirWsPublicTypes.xsd" />
+        </xsd:schema>
+    </wsdl:types>
+    
+    <!-- Vstupni data -->
+    <wsdl:message name="getIsirWsPublicIdDataRequestMessage">
+        <wsdl:part name="parameters" element="types:getIsirWsPublicIdDataRequest" />
+    </wsdl:message>
+    
+    <!-- Vystupni data -->
+    <wsdl:message name="getIsirWsPublicDataResponseMessage">
+        <wsdl:part name="parameters" element="types:getIsirWsPublicDataResponse" />
+    </wsdl:message>
+
+    <!-- Poskytovane sluzby -->
+    <wsdl:portType name="IsirWsPublicPortType">
+        
+        <!-- Pozadavek dle ID podnetu -->
+        <wsdl:operation name="getIsirWsPublicPodnetId">
+            <wsdl:input message="tns:getIsirWsPublicIdDataRequestMessage" />
+            <wsdl:output message="tns:getIsirWsPublicDataResponseMessage" />
+        </wsdl:operation>
+
+    </wsdl:portType>
+    
+    <wsdl:binding name="IsirWsPublicPortTypeBinding" type="tns:IsirWsPublicPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+        
+        <!-- Pozadavek dle ID podnetu -->
+        <wsdl:operation name="getIsirWsPublicPodnetId">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+        
+    </wsdl:binding>
+    
+    <wsdl:service name="isir_public_ws">
+        <wsdl:port name="IsirWsPublicPort" binding="tns:IsirWsPublicPortTypeBinding">
+            <soap:address location="xyz"/>
+        </wsdl:port>
+    </wsdl:service>
+    
+</wsdl:definitions>
