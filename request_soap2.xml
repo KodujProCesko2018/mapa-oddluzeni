@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://isirws.cca.cz/types/">
+  <soapenv:Header/>
+  <soapenv:Body>
+     <typ:getIsirWsCuzkDataRequest>
+        <bcVec>%VEC%</bcVec>
+         <rocnik>%ROCNIK%</rocnik>
+     </typ:getIsirWsCuzkDataRequest>
+  </soapenv:Body>
+</soapenv:Envelope>
