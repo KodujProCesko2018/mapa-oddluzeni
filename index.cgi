@@ -12,10 +12,10 @@ import json
 
 def getInfo(bcVec,rocnik):
     response = requests.get('https://vitek.baisa.net/insolvence/soap2.cgi?bcVec=%s&rocnik=%s' %(bcVec,rocnik), auth=('insolv', 'bankrot'))
-    root = ET.fromstring(response.text)
+    root = ET.fromstring(response.text.encode('utf-8'))
     data = {}
     for child in root[0][0][0]:
-        data[child.tag] = child.text
+        data[child.tag] = child.text#.encode('utf-8')
     return data
 
 class Insolvence():
@@ -37,7 +37,7 @@ class Insolvence():
         result = []
         while row is not None:
             result.append(getInfo(row[0],row[1]))
-            row = cur.fetchone()
+            row = curIn.fetchone()
         curIn.close()
         conIn.close()
         return result
