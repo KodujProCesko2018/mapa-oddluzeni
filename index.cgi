@@ -20,7 +20,9 @@ class Insolvence():
     def getFromDB(self, dateFrom, dateTo):
         conIn = sqlite3.connect('input.db',detect_types=sqlite3.PARSE_DECLTYPES)
         curIn = conIn.cursor()
-        curIn.execute("SELECT * FROM `tabulka` WHERE dateFrom > date('%s') AND dateTo < date('%s')" %(dateFrom,dateTo))
+        sqlQuery = "SELECT * FROM `tabulka` WHERE dateFrom > date('%s') AND dateTo < date('%s')" %(dateFrom,dateTo)
+        print(sqlQuery, file=sys.stderr)
+        curIn.execute(sqlQuery)
         row = curIn.fetchone()
         result = []
         while row is not None:
@@ -52,7 +54,7 @@ def getInfo(bcVec,rocnik):
     response = client.service.getIsirWsCuzkData(bcVec=bcVec,rocnik=rocnik)
     response['data'][0]['rc'] = response['data'][0]['rc'].replace("/", "")
     response['data'][0]['datumNarozeni'] = response['data'][0]['datumNarozeni'][:4]
-    return response['data']
+    return response['data'][0]
 
 def writeInfo(response,rocnik):
     conOut = sqlite3.connect('output.db',detect_types=sqlite3.PARSE_DECLTYPES)
