@@ -1,6 +1,8 @@
 # mapa-oddluzeni
 Získání a zpracování dat z insolvenčního rejstříku ve formátu vhodném pro mapu exekucí.
 
+* [Kódy soudů](https://ispis.cz/soudy)
+
 # Typy událostí v DB v letech 2008 až 2011
 ```
  315123 Přihláška pohledávky
