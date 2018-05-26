@@ -17,16 +17,18 @@ class Insolvence():
     def api1(self, od='20080101', do='20082131', udalost='in'):
         return {'data': [{'rc': 'XYZ', 'name': 'ABC DEF'}]}
 
-    def getFromDB(self, dateFrom, dateTo, tableName):
+    def getFromDB(self, dateFrom, dateTo):
         conIn = sqlite3.connect('input.db',detect_types=sqlite3.PARSE_DECLTYPES)
         curIn = conIn.cursor()
         curIn.execute("SELECT * FROM `tabulka` WHERE dateFrom > date('%s') AND dateTo < date('%s')" %(dateFrom,dateTo))
         row = curIn.fetchone()
+        result = []
         while row is not None:
-            info = getInfo(row[0],row[1])
+            result.append(getInfo(row[0],row[1]))
             row = cur.fetchone()
         curIn.close()
         conIn.close()
+        return result
 
     def serve(self):
         form = cgi.FieldStorage()
@@ -48,7 +50,9 @@ def getInfo(bcVec,rocnik):
     wsdl = 'https://isir.justice.cz:8443/isir_cuzk_ws/IsirWsCuzkService?wsdl'
     client = zeep.Client(wsdl=wsdl)
     response = client.service.getIsirWsCuzkData(bcVec=bcVec,rocnik=rocnik)
-    writeInfo(response,rocnik)
+    response['data'][0]['rc'] = response['data'][0]['rc'].replace("/", "")
+    response['data'][0]['datumNarozeni'] = response['data'][0]['datumNarozeni'][:4]
+    return response['data']
 
 def writeInfo(response,rocnik):
     conOut = sqlite3.connect('output.db',detect_types=sqlite3.PARSE_DECLTYPES)
