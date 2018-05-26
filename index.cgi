@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 #coding=utf-8
 
 import os
@@ -21,7 +21,6 @@ class Insolvence():
         conIn = sqlite3.connect('input.db',detect_types=sqlite3.PARSE_DECLTYPES)
         curIn = conIn.cursor()
         sqlQuery = "SELECT * FROM `tabulka` WHERE dateFrom > date('%s') AND dateTo < date('%s')" %(dateFrom,dateTo)
-        print(sqlQuery, file=sys.stderr)
         curIn.execute(sqlQuery)
         row = curIn.fetchone()
         result = []
