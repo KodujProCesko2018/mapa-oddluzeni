@@ -6,6 +6,9 @@ import sys
 import cgi
 import json
 import sqlite3
+import requests
+import xml.etree.cElementTree as ET
+import json
 
 def getInfo(bcVec,rocnik):
     response = requests.get('https://vitek.baisa.net/insolvence/soap2.cgi?bcVec=%s&rocnik=%s' %(bcVec,rocnik), auth=('insolv', 'bankrot'))
