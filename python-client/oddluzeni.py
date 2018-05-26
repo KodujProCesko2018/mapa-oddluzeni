@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import datetime, date
 import zeep
 
 class Info:
@@ -24,22 +25,25 @@ def getInfo(bcVec,rocnik):
     info.psc = response['data'][0]['psc']
     return info
 
-def getFromDB():
-    con = sqlite3.connect('example.db')
+def getFromDB(dateFrom, dateTo):
+    con = sqlite3.connect('example.db',detect_types=sqlite3.PARSE_DECLTYPES)
     cur = con.cursor()
     #cur.execute('''CREATE TABLE tabulka
-    #             (bcVec int, rocnik int, dateFrom text, dateTo text)''')
+    #             (bcVec int, rocnik int, dateFrom date, dateTo date)''')
     #cur.execute("INSERT INTO tabulka VALUES (336,2008,'2006-01-05','2007-01-05')")
+    #cur.execute("INSERT INTO tabulka VALUES (337,2008,'2007-01-05','2008-01-05')")
     #con.commit()
-    cur.execute("SELECT * FROM `tabulka`")
+    cur.execute("SELECT * FROM `tabulka` WHERE dateFrom > date('%s') AND dateTo < date('%s')" %(dateFrom,dateTo))
+    #cur.execute("SELECT " + dateFrom + " FROM `tabulka`")
     row = cur.fetchone()
     while row is not None:
-        info = getInfo(row[0],row[1])
-        print(info.psc)
+        print(row[2])
+        #info = getInfo(row[0],row[1])
+        #print(info.psc)
         row = cur.fetchone()
     cur.close()
     con.close()
 
-getFromDB()
+getFromDB('2006-01-01','2007-12-31')
 
 
