@@ -1,4 +1,4 @@
-CREATE TABLE `rok2008` (insNum text, rc int, jmeno text, prijmeni text, rokNarozeni int, mesto text, soud text, psc int)
+CREATE TABLE `rok2008` (insNum text, rc int, jmeno text, prijmeni text, rokNarozeni int, mesto text, soud text, psc int);
 INSERT INTO `rok2008` VALUES ('240/2008', 7108245628, 'Michael', 'Pokorný', -1, 'Ostrava-Poruba', 'Krajský soud v Ostravě', 70800);
 INSERT INTO `rok2008` VALUES ('2517/2008', 6705130575, 'Petr', 'Franz', 1967, 'Česká Kamenice', 'Krajský soud v Ústí nad Labem', 40721);
 INSERT INTO `rok2008` VALUES ('2688/2008', 6708070721, 'Jiří', 'Haase', -1, 'Turnov', 'Krajský soud v Hradci Králové', 51101);
