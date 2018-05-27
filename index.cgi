@@ -26,14 +26,16 @@ class Insolvence():
         return {'error': 'Unknown method'}
 
     def api1(self, dateFrom='2008-01-01', dateTo='2008-12-31', type='start'):
-        if type not in ['start', 'end']:
-            return {'error': 'Use type={start,end}'}
+        if type not in ['start', 'end', 'active']:
+            return {'error': 'Use type={start,end,active}'}
         conIn = sqlite3.connect('input.db')
         curIn = conIn.cursor()
         print >>sys.stderr, type, dateFrom, dateTo
         if type == 'start':
             q = 'SELECT * FROM insolvence WHERE (date1 BETWEEN "%s" AND "%s")' % (dateFrom, dateTo)
             q += ' AND (date1 NOT LIKE "%?%");'
+        elif type == 'active':
+            q = "SELECT * FROM insolvence WHERE date1 < '%s' AND date2 > '%s';" % (dateTo, dateTo)
         else:
             q = 'SELECT * FROM insolvence WHERE date2 BETWEEN "%s" AND "%s"' % (dateFrom, dateTo)
             q += ' AND date2 NOT LIKE "%?%";'
