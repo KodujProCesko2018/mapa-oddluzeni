@@ -108,7 +108,7 @@ prehled.onAdd = function(map) {
   return this._div;
 };
 
-prehled.addTo(map);
+//prehled.addTo(map);
 
 
 
@@ -831,18 +831,18 @@ $('.year').click(function(e) {
   map.spin(false);
   map.spin(true);
   $('.year').css('font-weight', 'normal');
-  $('.year').css('font-size', '18px');
+  $('.year').css('font-size', '22px');
   $('.year').css('text-decoration', 'none');
   $('.year').css('border-bottom', '0px');
-  $('.year.change').css('font-size', '12px');
+  $('.year.change').css('font-size', '22px');
   $(this).css('font-weight', 'bold');
+  $(this).css('color', '#23c5ff');
   if ($(this).attr("class") == "year change") {
-    $(this).css('font-size', '16px');
+    $(this).css('font-size', '22px');
   } else {
     $(this).css('font-size', '24px');
   }
 
-  $(this).css('border-bottom', '5px solid #91375E');
   rok = $(this).attr("title");
   if (rok == "2017") {
     $('#rad_poi').attr('disabled', false);
