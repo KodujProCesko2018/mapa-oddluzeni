@@ -25,8 +25,31 @@ class Insolvence():
     def default(self):
         return {'error': 'Unknown method'}
 
-    def api1(self, od='20080101', do='20082131', udalost='in'):
-        return {'data': [{'rc': 'XYZ', 'name': 'ABC DEF'}]}
+    def api1(self, dateFrom='2008-01-01', dateTo='2008-12-31', type='start'):
+        if type not in ['start', 'end']:
+            return {'error': 'Use type={start,end}'}
+        conIn = sqlite3.connect('input.db')
+        curIn = conIn.cursor()
+        print >>sys.stderr, type, dateFrom, dateTo
+        if type == 'start':
+            q = 'SELECT * FROM insolvence WHERE (date1 BETWEEN "%s" AND "%s")' % (dateFrom, dateTo)
+            q += ' AND (date1 NOT LIKE "%?%");'
+        else:
+            q = 'SELECT * FROM insolvence WHERE date2 BETWEEN "%s" AND "%s"' % (dateFrom, dateTo)
+            q += ' AND date2 NOT LIKE "%?%";'
+        r = curIn.execute(q)
+        result = []
+        for row in r.fetchall():
+            result.append({
+                'ins': row[1],
+                'date1': row[2],
+                'code1': row[3],
+                'date2': row[4],
+                'code2': row[5]
+            })
+        curIn.close()
+        conIn.close()
+        return {'data': result, 'records': len(result)}
 
     def getFromDB(self, dateFrom, dateTo):
         conIn = sqlite3.connect('input.db',detect_types=sqlite3.PARSE_DECLTYPES)
