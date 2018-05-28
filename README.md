@@ -1,5 +1,5 @@
 # mapa-oddluzeni
-Získání a zpracování dat z insolvenčního rejstříku ve formátu vhodném pro mapu exekucí.
+Získání a zpracování dat z [insolvenčního rejstříku](https://isir.justice.cz/) ve formátu vhodném pro mapu exekucí.
 
 * [Kódy soudů](https://ispis.cz/soudy)
 
