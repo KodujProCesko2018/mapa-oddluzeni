@@ -1,0 +1,877 @@
+POCET	KOD	UDALOST
+================================================================================
+2190076	63	Přihláška pohledávky
+1583960	625	Zasílání údajů o změně osoby věřitele v přihlášce
+873867	1	Změna osoby
+790307	2	Změna adresy osoby
+724441	185	Vyhláška o zahájení insolvenčního řízení
+657858	78	Usnesení o úpadku spojené s povolením oddlužení
+600326	175	Usnesení o schválení oddlužení plněním splátkového kalendáře
+550992	247	Usnesení o změně v osobě věřitele
+515130	39	Sdělení správce o plnění oddlužení
+456655	332	Zpráva IS o stavu řízení
+357335	563	Doplnění/oprava/změna přihlášené pohledávky
+320859	66	Usnesení
+308719	23	Návrh - přílohy
+294800	606	Sdělení insolvenčního správce
+278606	357	Přípis
+268801	189	Výzva
+244431	28	Sdělení
+231222	6	Insolvenční návrh spojený s návrhem na povolení oddlužení
+225173	52	Zpráva dlužníka o svých příjmech dle § 412 odst. 1 písm. d)
+223709	64	Seznam přihlášených pohledávek
+200028	124	Usnesení o odmítnutí přihlášky
+196069	468	Usnesení o uložení povinnosti
+195454	195	Výzva na správce
+186744	177	Usnesení o vzetí na vědomí splnění oddlužení
+183756	372	Změna stavu věci
+178729	105	Usnesení o ustanovení správce
+176205	584	Usnesení o vzetí na vědomí částečného zpětvzetí přihlášky
+172346	228	Opatření o určení osoby správce
+172199	110	Usnesení o zproštění funkce správce po skončení řízení
+168068	222	Nařízení jednání
+164591	605	Usnesení o změně splátkového kalendáře
+161312	29	Sdělení dlužníka
+155436	239	Jiné
+145697	223	Úřední záznam
+145026	190	Usnesení o uložení povinnosti zaplatit zálohu
+142168	126	Usnesení o vzetí na vědomí zpětvzetí přihlášky
+140645	568	Protokol z přezkumného jednání
+137663	72	Usnesení o odmítnutí insolvenčního návrhu
+136956	334	Soupis majetkové podstaty
+135841	450	Seznam/upravený seznam přihlášených pohledávek
+130588	593	Usnesení o část. odmítnutí přihlášky
+129833	343	Návrh na změnu v osobě věřitele
+124105	473	Usnesení o zastavení řízení
+118250	501	Žádost o určení osoby správce
+117533	537	Usnesení o uspokojení zajištěného věřitele
+115089	30	Sdělení věřitele
+112228	22	Návrh - doplnění návrhu
+110602	199	Výzva k opravě nebo doplnění návrhu na povolení oddlužení
+109036	354	Pověření asistenta soudce
+108033	445	Referát
+107039	202	Výzva k opravě nebo doplnění návrhu
+106984	165	Usnesení o odměně správce
+102000	466	Usnesení o schválení konečné zprávy
+92707	178	Usnesení o osvobození dlužníka od placení dosud neuspokojených pohledávek
+91073	367	Žádost
+90846	95	Usnesení o zrušení konkursu
+89153	535	Usnesení o prodeji mimo dražbu
+82213	439	Přezkumné jednání
+81831	355	Pověření vyššího soudního úředníka
+80686	562	Částečné zpětvzetí přihlášené pohledávky
+75894	494	Zaslání přihlášky/přihlášek správci
+75694	356	Prezenční listina
+75047	532	Opravné usnesení
+74016	582	Žádost insolvenčního správce
+70348	76	Usnesení o úpadku spojené s prohlášením konkursu
+69479	215	Protokol o jednání
+68052	204	Pokyn insolvenčního soudu
+64696	492	Zápis v rejstříku ukončen
+63643	596	Usnesení o část.změně v osobě věřitele
+62438	214	Protokol ze schůze věřitelů
+61033	184	Vyhláška
+59816	427	Oznámení
+58459	581	Zpětvzetí přihlášené pohledávky
+57103	55	Plná moc
+56475	392	Předložení věci vrchnímu soudu
+55124	998	Vyrozumění o popření přihlášené pohledávky
+55025	373	Rozhodnutí o odvolání - potvrzeno
+51579	210	Vyrozumění
+50639	49	Zpráva o hospodářské situaci dlužníka
+50619	351	Platební poukaz
+50162	451	Schůze věřitelů
+49273	116	Usnesení o jmenování prozatímního věřitelského výboru
+48652	565	Odročení jednání
+48101	182	Dotaz
+47599	218	Rozvrhové usnesení
+47590	574	Usnesení o vydání/vyplacení zálohy na náklady řízení správce
+45912	554	Opětovné doručení vyhláškou
+45673	929	Pověření asistenta soudce/VSÚ
+39768	447	Sdělení o odstoupení z funkce ve v.v.
+39572	188	Vyhláška o konečné zprávě
+38984	82	Usnesení o zamítnutí insolvenčního návrhu
+38777	194	Výzva dlužníkovi k vyjádření se k insolvenčnímu návrhu
+37922	187	Vyhláška o svolání přezkumného jednání
+37652	226	Konečná zpráva
+37195	41	Vyjádření
+36877	621	Usnesení o spojení věci k společnému projednávání
+35393	365	Výzva k zaplacení SOP
+34825	496	Záznam o zaplacení zálohy na insolvenční řízení
+34662	75	Usnesení o úpadku
+34006	561	Konečný/Závěrečný referát
+31680	48	Zpráva
+31435	94	Usnesení o prohlášení konkursu
+31307	5	Insolvenční návrh
+31091	200	Výzva na zprávu správce o plnění oddlužení
+29249	56	Výpis
+28991	382	Převzetí věci Vrchním soudem
+28943	346	Návrh na vydání výtěžku zpeněžení zajištěnému věřiteli
+27735	481	Vrácení příloh
+27582	386	Protokol o hlasování
+27513	380	Zaslání rozhodnutí odvolacího soudu
+27128	410	Insolvenční návrh spojený s návrhem na prohlášení konkursu
+26877	19	Návrh na osvobození od placení dosud neuspokojených pohledávek
+26609	230	Odvolání
+25519	534	Výpis ze seznamu přihlášených pohledávek
+25405	42	Vyjádření dlužníka
+24577	493	Zaslání doplnění přihlášky správci
+24350	181	Usnesení o zrušení schváleného oddlužení
+24312	186	Vyhláška o svolání schůze věřitelů
+24140	643	Nový nápad
+23104	134	Usnesení o vynětí majetku z majetkové podstaty
+23077	329	Záznam o mylném zařazení
+22857	464	Usnesení o postoupení věci
+21922	374	Rozhodnutí o odvolání - změněno
+21634	40	Sdělení dlužníka o plnění oddlužení
+21409	480	Vrácená obálka
+20648	369	Právní moc
+20620	974	Oznámení pro vyvěšení na ÚD+EÚD
+20187	544	Výzva k podávání přihlášek pohledávek
+19976	484	Vyhláška o svolání zvláštního přezkumného jednání
+18861	183	Rozsudek
+18627	707	Sdělení pro vyvěšení na ÚD+EÚD
+18153	1036	Zpráva pro oddlužení
+18058	237	Vrácení spisu soudu I. stupně
+18024	1004	Usnesení o zamítnutí návrhu na změnu věřitele
+17727	97	Usnesení o nepatrném konkursu
+17705	128	Usnesení o ukončení účasti věřitele v insolvenčním řízení
+17479	201	Výzva na zprávu dlužníka o plnění oddlužení
+17230	829	Výpis z katastru nemovitostí
+16956	50	Zpráva o průběhu zpeněžení
+16791	635	Usnesení o dodatečném zjištění popřené pohledávky
+16521	425	Odvolání jiné
+16502	437	Předvolání ke slyšení
+16402	176	Usnesení o neschválení oddlužení
+16359	443	Příloha k protokolu o jednání
+16213	347	Návrh na vydání souhlasu se zpeněžením MP mimo dražbu
+15924	174	Usnesení o schválení oddlužení zpeněžením majetkové podstaty
+15201	375	Rozhodnutí o odvolání - zrušeno a vráceno
+15094	366	Zaplacení SOP
+15041	687	Přílohy
+14902	1037	Zpráva o přezkumu
+14630	1024	Výzva zahraničním věřitelům dle § 430 IZ
+14424	108	Usnesení o odvolání správce z funkce
+14288	53	Zpráva dlužníka o změně údajů dle § 412 odst. 1 písm. c)
+14138	572	Usnesení o nepřipuštění změny v osobě věřitele
+14126	488	Vyúčtování odměny a výdajů správce
+14011	585	Předvolání k jednání
+13641	61	Jiné podání
+13485	583	Žádost o prodloužení lhůty
+13301	592	Usnesení o část. nepřihlížení a odmítnutí přihlášky
+12897	448	Sdělení o osobě jednající jménem člena/náhradníka v.o.
+12897	27	Žaloba
+12717	569	Protokol ze zvláštního přezkumného jednání
+12597	595	Usnesení o nepřihlížení a odmítnutí přihlášky
+12356	8	Návrh
+12116	580	Záznam o vydání
+12116	54	Znalecký posudek
+12069	529	Zpětvzetí návrhu
+11966	636	Znepřístupnění údajů o dlužníkovi dle § 425 IZ
+11797	192	Výzva na doplnění příloh insolvenčního návrhu
+11673	490	Vzdání se práva odvolání
+11431	125	Usnesení o tom, že se k přihlášce nepřihlíží
+11353	1039	Záznam o jednání s dlužníkem
+11311	212	Protokol
+11155	552	Usnesení o změně rozhodnutí soudu I.stupně (bez změny stavu)
+11049	338	Návrh rozvrhového usnesení
+10946	428	Oznámení soudu
+10810	966	Omluva na jednání
+10732	348	Omluva
+10470	618	Záznam o složení
+10362	498	Zpětvzetí popření pohledávky insolvenčním správcem
+10175	573	Usnesení o vrácení zálohy na insolvenční řízení
+10088	145	Usnesení o prodloužení lhůty ke splnění povinností
+9998	350	Zpráva IS po zrušení konkursu
+9973	470	Usnesení o vyplacení zálohy na odměnu správce
+9785	454	Soupis majetkové podstaty - doplnění
+9609	555	Usnesení o změně insolvenčního správce
+9586	1038	Usnesení o zprávě o přezkumu
+9321	594	Usnesení o část. ukončení účasti věřitele v insol. řízení
+9242	1046	Zpráva IS o splnění oddlužení
+9157	242	Výzva na doplnění odvolání
+9087	755	Usnesení - výzva, aby se účastník vyjádřil k žalobě
+8902	434	Předvolání k výslechu
+8891	227	Opatření
+8427	172	Usnesení o povolení oddlužení
+8410	377	Rozhodnutí o odvolání - odmítnuto
+8388	567	Odvolání jednání
+8337	867	Žádost o odročení jednání
+8316	927	Vyjádření k žalobě
+8177	444	Přistoupení k řízení (§ 107 IZ)
+8052	413	Přihláška - návrh na vstup nového věřitele
+7847	149	Usnesení o konečné zprávě
+7579	349	Zpráva IS o splnění rozvrhového usnesení
+7501	725	Usn. o výzvě k zaplacení SOP/doplatku SOP
+7491	205	Souhlas
+7410	62	Hlasovací lístek
+7355	436	Převedení spisu příslušnému soudu
+7309	146	Usnesení o povolení výjimky ze zákazu nabývání majetku z majetkové podstaty
+7075	600	Úřad práce - uspokojení mzdových nároků
+6978	723	Usn. o povinnosti zaplatit SOP
+6917	483	Vyhláška o jednání o konečné zprávě
+6736	438	Převzetí spisu z jiného soudu
+6696	1027	Smlouva
+6574	122	Usnesení o uložení pořádkové pokuty
+6260	231	Odvolání - doplnění
+6151	449	Seznam přihlášených pohledávek - změna
+6033	553	Usnesení o zrušení rozhodnutí soudu I.stupně (bez změny stavu)
+5862	854	Zpětvzetí
+5736	405	Změna senátu věci
+5568	193	Výzva na předložení seznamů k insolvenčnímu návrhu
+5519	706	Sdělení o pohledávce
+5452	381	Zaslání rozhodnutí odvolacího soudu a vrácení spisu
+5424	608	Konečná zpráva  - doplnění
+5389	556	Reklamace doručenky
+5344	344	Návrh na zrušení konkurzu
+5231	387	Žádost o zapůjčení spisu
+5043	43	Vyjádření navrhovatele
+4948	12	Návrh na vynětí majetku z majetkové podstaty
+4848	420	Návrh na uspokojení pohledávky za podstatou
+4785	471	Usnesení o zamítnutí návrhu na předběžné opatření
+4691	376	Rozhodnutí o odvolání - zastavení řízení
+4674	617	Zaslání rozhodnutí s doložkou právní moci
+4672	619	Usnesení o zrušení oddlužení z důvodu úmrtí dlužníka
+4663	571	Předložení přihlášky VS
+4637	727	Usnesení - jiné
+4561	20	Návrh na zrušení schváleného oddlužení
+4555	1002	Usnesení o zastavení řízení vůči zemřelému dlužníkovi
+4518	58	Výpis z obchodního rejstříku
+4516	634	Usnesení o vyloučení věci k samostatnému řízení
+4456	1032	Pokyn zajištěného věřitele
+4439	839	Výzva k odstranění vad podání
+4408	24	Námitky
+4225	423	Návrh na zproštění správce z funkce
+4031	968	OP - odvolání do rozhodnutí
+3957	833	Vyrozumění o odročení nebo odvolání jednání
+3923	370	Právní moc konečného rozhodnutí
+3784	751	Usnesení - výzva k vyjádření
+3781	1025	Pohledávka za majetkovou podstatou
+3752	117	Usnesení o jmenování členů a náhradníků věřitelského výboru
+3655	542	Usnesení o odmítnutí žaloby
+3581	429	Oznámení o změně konání jednání
+3564	106	Usnesení o potvrzení správce zvoleného schůzí věřitelů
+3520	878	Usnesení - výzva, zda účastník souhlasí s rozhodnutím bez jednání
+3516	359	Vstup státního zastupitelství do řízení
+3515	497	Zkrácené znění usnesení
+3334	930	Opatření o příkázání věci jinému soudci
+3262	85	Usnesení o vydání předběžného opatření
+3084	784	Usnesení o spojení věcí ke společnému projednání
+3082	115	Usnesení o potvrzení volby členů a náhradníků věřitelského orgánu
+2970	691	Přípis žalobci/zástupci žalobce
+2958	1044	Žádost dlužníka
+2889	679	Předvolání zástupce účastníka k 1. jednání
+2798	9	Návrh na předběžné opatření
+2775	485	Výpis z evidence ARES
+2736	675	Předvolání účastníka k 1. jednání
+2701	421	Návrh na uspokojení zajištěného věřitele
+2547	664	Předkládací zpráva
+2534	441	Přihláška pohledávky - doplnění, oprava
+2514	1005	Usnesení o odmítnutí odvolání pro opožděnost
+2384	610	Usnesení o ustanovení odděleného správce
+2357	390	Předložení věci Nejvyššímu soudu
+2287	888	VS - Rozsudek - potvrzeno
+2265	234	Zapůjčení spisu
+2262	478	Usnesení o zrušení rozhodnutí soudu I.stupně
+2209	865	Žádost o vyznačení doložky PM
+2195	103	Usnesení o zastavení řízení o žalobě
+2194	973	Oznámení o ukončení zastupování
+2183	892	VS - Usnesení - potvrzeno
+2177	337	List vlastnictví
+2147	647	Doplnění žaloby/návrhu
+2115	840	Výzva k vyzvednutí směnky
+2037	777	Usnesení o přerušení řízení
+2001	540	Usnesení o nařízení prohlídky prostor
+1985	236	Záznam o nahlížení do spisu
+1964	1053	Vyhláška o zprávě o přezkumu a zprávě pro oddlužení
+1962	577	Vrácení přihlášky soudu I.stupně
+1953	538	Soupis majetkové podstaty - změna
+1941	843	Zaplacení Sop převodem
+1940	477	Usnesení o změně rozhodnutí soudu I.stupně
+1902	633	Popření pohledávky přihlášeným věřitelem
+1878	25	Námitky proti konečné zprávě
+1857	756	Usnesení - zamítnutí návrhu
+1853	1007	Seznam majetku a závazků
+1745	407	Dovolání
+1714	692	Přípis žalovanému/zástupci žalovaného
+1711	955	Doplnění odvolání
+1688	475	Usnesení o zastavení řízení vůči učastníku (§ 130 odst. 2 IZ)
+1671	360	Výstupu státního zastupitelství z řízení
+1661	512	Rozhodnutí NS o dovolání - odmítnutí
+1655	487	Vyřízeno jiným způsobem
+1626	637	Souhlas soudu se žádostí o vyškrtnutí dlužníka ze seznamu dlužníků
+1624	613	Usnesení o ustanovení opatrovníka pro insolvenční řízení
+1597	243	Výzva k vyjádření se k odvolání
+1595	393	Přípis - bez věcného vyřízení
+1592	463	Usnesení o odmítnutí návrhu na předběžné opatření
+1592	148	Usnesení o povolení částečného rozvrhu
+1588	956	Odpověď na výzvu
+1546	1026	Sdělení účtárny
+1529	414	Návrh dlužníka
+1510	141	Usnesení o schválení dohody o vypořádání SJM
+1460	672	Předvolání svědka
+1446	342	Návrh na vydání opravného usnesení
+1440	138	Usnesení o skončení provozu dlužníkova podniku
+1435	44	Dotaz na stav řízení
+1433	765	Evidenční karta diktafonového záznamu
+1419	139	Usnesení o pokračování v přerušeném řízení
+1415	782	Usnesení o schválení smíru
+1374	894	VS - Usnesení - zrušeno a vráceno
+1370	684	Předvolání žalovaného k 1. jednání
+1366	88	Usnesení o ustanovení předběžného správce
+1351	1033	Usnesení o pokynu zajištěného věřitele
+1325	959	Odročeno s rezervací
+1321	841	Výzva pro vyvěšení na ÚD+EÚD
+1310	1028	Smlouva o prodeji mimo dražbu
+1285	476	Usnesení o změně v osobě znalce
+1275	591	Rozhodnutí z incidenčního sporu
+1252	564	Odpověď na reklamaci doručenky
+1222	750	Usnesení - výzva k předložení listin
+1205	597	Směnka
+1197	465	Usnesení o prominutí pořádkové pokuty
+1187	404	Převzetí věci Nejvyšším soudem
+1174	893	VS - Usnesení - změna
+1158	815	Usnesení s výzvou k odstranění vad odvolání
+1158	378	Rozhodnutí o odvolání - jinak
+1151	889	VS - Rozsudek - změna
+1144	109	Usnesení o zproštění funkce správce pro porušení povinností
+1142	764	Usnesení o částečném zpětvzetí
+1139	607	Vyřízení reklamace
+1133	1006	Usnesení o vrácení SOP/přeplatku SOP
+1116	752	Usnesení - výzva vyjádřit se k odvolání/dovolání
+1088	362	Usnesení o ustanovení tlumočníka
+1086	702	Rozsudek pro uznání
+1076	232	Odvolání - zpětvzetí odvolání
+1071	612	Zpětvzetí popření pohledávky dlužníkem
+1067	171	Usnesení o zamítnutí návrhu na povolení oddlužení
+1047	18	Návrh na povolení oddlužení
+1034	383	Rozhodnutí o tom, zda je soudce vyloučen
+1031	1008	Vyúčtování nákladů
+1030	716	Urgence
+1024	335	Dražební vyhláška
+1023	868	Žádost o osvobození od zaplacení Sop
+983	682	Předvolání zástupce žalovaného k 1. jednání
+965	758	Usnesení - zastavení řízení
+962	680	Předvolání zástupce účastníka k dalšímu jednání
+946	233	Vrácení spisu
+942	432	Protokol z jednání věřitelského výboru
+914	609	Dotaz na CEO
+897	661	Protokol o veřejném vyhlášení rozsudku
+888	1030	Doplnění žádosti
+878	831	Výpis z živnostenského rejstříku
+876	79	Usnesení o způsobu řešení úpadku konkursem dle usnesení schůze věřitelů
+874	461	Usnesení o odměně a hotových výdajích tlumočníka
+871	415	Návrh na odvolání správce
+866	749	Usnesení - o prodloužení lhůty
+861	965	Doplnění podání žalobce/navrhovatele
+857	744	Usnesení - o zamítnutí žádosti o osvobození od Sop
+817	45	Stížnost
+813	217	Protokol o prohlášení o majetku
+787	173	Usnesení o způsobu oddlužení dle § 402 odst. 5
+756	576	Vrácení přihlášky
+752	676	Předvolání účastníka k dalšímu jednání
+745	389	Protokol o vyhlášení rozhodnutí
+741	776	Usnesení o procesním nástupnictví § 107 o.s.ř.
+736	1031	Výzva k podání žaloby na určení pořadí uplatněné pohledávky ( § 203a IZ)
+733	958	Odročeno na neurčito
+709	411	Námitka podjatosti
+701	46	Stížnost dlužníka
+698	511	Rozhodnutí NS o dovolání - zastavení řízení
+696	773	Usnesení o pokračování v přerušeném řízení
+680	989	Poučení o procesních právech a povinnostech účastníka
+660	763	Usnesení o částečném zastavení řízení
+653	726	Usnesení o výzvě k doplnění tvrzení
+648	340	Návrh na svolání schůze věřitelů
+647	601	Výzva na doplnění dovolání
+643	772	Usnesení o odmítnutí odvolání
+638	456	Usnesení o uspokojení pohledávky za podstatou
+628	623	Oddělení spojené věci po PM
+617	957	Odpověď na žádost
+612	646	Částečné zpětvzetí
+610	588	Zpětvzetí
+610	158	Usnesení o schválení reorganizačního plánu
+599	799	Usnesení o zamítnutí návrhu
+597	602	Usnesení o odmítnutí jednoho z insolvenčních návrhů
+593	336	Protokol o vydražení
+592	91	Usnesení o ustanovení znalce
+592	1000	Usnesení o zastavení odvolacího řízení
+572	812	Usnesení o zrušení usn. pro nezaplacení Sop
+571	622	Oddělení spojené věci
+567	952	Odeslání spisu - v S.O.
+562	341	Návrh částečného rozvrhového usnesení
+557	724	Usn. o vrácení SOP/přeplatku SOP
+557	123	Usnesení o předvolání k výslechu
+550	402	Zaslání rozhodnutí dovolacího soudu a vrácení spisu
+543	238	Mylný zápis
+525	119	Usnesení o odvolání z funkce člena nebo náhradníka věřitelského výboru
+523	1050	Usnesení o zrušení schváleného oddlužení a zastavení řízení
+515	845	Zaplacení Sop v kolcích
+514	531	Protokol o prohlídce prostor
+512	578	Výzva likvidátorovi
+509	1034	Usnesení o zamítnutí návrhu na osvobození od placení pohledávek
+490	896	VS - Usnesení - odvolací řízení zastaveno
+490	792	Usnesení o ustanovení zástupce
+488	99	Usnesení o povolení reorganizace
+488	59	Reorganizační plán
+484	969	Opětovné doručení
+484	747	Usnesení - o změně rozhodnutí
+482	104	Usnesení o smíru
+469	850	Záznam
+468	629	Rozhodnutí o odvolání - zrušeno a zastaveno
+465	631	Záznam o složení jistoty
+459	880	Výpis z CEO
+458	795	Usnesení o vyloučení věci k samostatnému projednání
+457	895	VS - Usnesení - jinak
+451	458	Usnesení o nařízení předběžného opatření bez návrhu
+444	824	Vrácení spisu - z S.O.
+441	74	Usnesení o neúčinnosti zpětvzetí insolvenčního návrhu
+435	513	Rozhodnutí NS o dovolání - zamítnutí
+426	598	Návrh na určení lhůty
+421	417	Návrh na pokračování v řízení
+420	976	Doplnění podání žalovaného/odpůrce
+420	917	NS – Rozhodnutí NS o dovolání – odmítnutí
+411	970	Opravné usnesení vedlejší
+393	77	Usnesení o úpadku spojené s povolením reorganizace
+390	848	OP - Dovolání
+386	566	Odvolání do předběžného opatření
+384	611	Usnesení o zproštění odděleného správce
+378	408	Dovolání - doplnění dovolání
+376	541	Rozhodnutí jiného soudu
+374	906	VS - Usnesení o příslušnosti
+371	722	Usn. o osvobození od SOP v plném rozsahu
+371	163	Usnesení o přeměně reorganizace v konkurs
+368	474	Usnesení o zastavení řízení o předběžném opatření
+365	627	Převzetí vyžádaného spisu
+359	560	Rozhodnutí o důvodnosti postoupení
+358	1054	Zpráva insolvenčního správce
+357	391	Rozhodnutí VS/NS o určení příslušnosti
+355	363	Vyúčtování odměny znalce nebo tlumočníka
+351	760	Usnesení - zrušení rozhodnutí
+345	624	Rozhodnutí soudu o určení procesní lhůty
+343	169	Usnesení o vzetí na vědomí zpětvzetí návrhu na povolení oddlužení
+339	630	Usnesení o schválení zprávy o reorganizačním plánu
+338	790	Usnesení o ustanovení opatrovníka
+337	832	Výpis/opis z rejstříku trestů
+336	446	Referát pro judikaturu
+335	26	Námitky proti povolení oddlužení dle § 403 odst. 2
+332	333	Dohoda o vypořádání SJM
+320	147	Usnesení o pořadí úhrady pohledávky
+319	941	Návrh na přerušení řízení
+310	781	Usnesení o přiznání znalečného
+308	628	Zaslání rozhodnutí dovolacího soudu
+308	616	Návrh na ustanovení předběžného správce
+308	13	Návrh na povolení reorganizace
+307	47	Stížnost věřitele
+305	570	Předložení přihlášky NS
+301	814	Usnesení o zrušení usnesení soudu I.stupně
+300	897	VS - Usnesení - odvolání odmítnuto
+296	802	Usnesení o zastavení řízení o odvolání
+291	1029	Usnesení o odmítnutí dovolání
+290	1018	Vyhláška o zahájení insolvenčního řízení dalšího dlužníka
+285	984	Pokus o smír
+285	406	Doručení do ciziny
+281	545	Vyhláška o výzvě k podávání přihlášek pohledávek
+281	51	Zpráva o plnění reorganizačního plánu
+279	734	Usnesení - o nevyhovění
+278	855	Zpětvzetí jiné
+274	990	Poučení účastníka o právu vyjádřit se k osobám soudců
+271	92	Usnesení o schválení odměny znalce
+270	857	Zpětvzetí odvolání
+268	440	Přihláška pohledávky - částečné zpětvzetí
+266	559	Usnesení o odmítnutí návrhu na moratorium - po insolvenčním návrhu
+265	847	Zaslání odvolání
+264	1001	Návrh na prohlášení konkursu
+262	167	Usnesení o odmítnutí návrhu na povolení oddlužení pro vady
+256	60	Reorganizační plán - zpráva
+255	761	Usnesení dle § 114b o.s.ř.
+250	801	Usnesení o zastavení řízení - dílčí
+250	197	Výzva k opravě nebo doplnění návrhu na povolení reorganizace
+248	98	Usnesení o zrušení rozhodnutí o nepatrném konkursu
+248	953	Odpověď na dotaz
+248	742	Dovolání - jiné
+248	546	Návrh na moratorium k insolvenčnímu návrhu
+246	168	Usnesení o odmítnutí návrhu na povolení oddlužení pro opožděnost nebo neoprávněnost
+245	579	Zapůjčení přihlášky
+242	164	Usnesení o vzetí na vědomí splnění reorganizačního plánu
+241	156	Usnesení o zamítnutí návrhu na povolení reorganizace
+239	886	Vrácení směnky
+236	689	Doplňující usnesení
+231	442	Přihláška pohledávky - zpětvzetí
+231	33	Sdělení banky
+226	83	Usnesení o zamítnutí insolvenčního návrhu pro nedostatek majetku dlužníka
+223	638	Žaloba pro zmatečnost
+221	999	Usnesení o zastavení dovolacího řízení
+216	902	VS - Vrácení spisu soudu I. stupně
+215	794	Usnesení o vrácení jistoty
+212	486	Vyrozumění o soupisu majetkové podstaty
+212	462	Usnesení o odmítnutí konečné zprávy
+202	87	Usnesení o zastavení řízení pro nezaplacení zálohy na náklady řízení
+193	7	Insolvenční návrh spojený s návrhem na povolení reorganizace
+189	992	Poukaz účtárně k vrácení Sop
+186	435	Předvedení k soudu
+185	658	Doplňková informace žalobce/navrhovatele
+184	358	Sdělení o vstupu KSZ do řízení
+181	780	Usnesení o přiznání tlumočného
+180	1009	Zpětvzetí popření pohledávky věřitelem
+175	1040	Usnesení o uložení pokuty podle insolvenčního zákona
+171	403	Rozhodnutí o místní příslušnosti (§ 11 odst. 3 OSŘ)
+169	135	Usnesení o neúčinnosti právního úkonu
+167	1049	Usnesení o neschválení oddlužení a zastavení řízení
+163	961	Odvolání jednání s rezervací
+161	213	Protokol o prohlášení o postoupení pohledávky
+152	942	Návrh na přistoupení dalšího účastníka do řízení
+152	898	VS - Vrácení bez věcného vyřízení
+152	514	Rozhodnutí NS o dovolání - zrušení a vrácení odvolacímu soudu
+151	769	Usnesení o nákladech řízení
+148	779	Usnesení o přiznání odměny opatrovníkovi
+147	384	Rozhodnutí o delegaci
+147	121	Usnesení o odvolání věřitelského výboru
+145	339	Návrh na schválení dohody o vypořádání SJM
+143	547	Usnesení o vyhlášení moratoria - po insolvenčním návrhu
+141	96	Usnesení o schválení zprávy správce po úmrtí dlužníka
+141	762	Usnesení o částečném odmítnutí žaloby
+140	701	Rozhodnutí předsedy soudu
+140	539	Usnesení o svolání věřitelského výboru
+139	988	Poučení o námitce podjatosti
+135	787	Usnesení o uložení pokuty
+134	947	Návrh na vydání předběžného opatření
+134	800	Usnesení o zamítnutí přerušení řízení
+134	536	Usnesení o zpěněžení podniku
+132	786	Usnesení o určení svědečného
+131	615	Pokyn účtárně k vymáhání
+130	730	Usnesení - o nepřipuštění vstupu nového účastníka
+129	1045	Žádost o vyškrtnutí dlužníka ze seznamu dlužníků
+128	703	Rozsudek pro zmeškání
+128	331	Náhradní doručení
+126	826	Vstup státního zástupce
+125	748	Usnesení - o odmítnutí podání
+125	457	Usnesení o doplnění/změně konečné zprávy
+123	985	Potvrzení o osobních a majetkových poměrech-k předání účastníkovi
+123	416	Návrh na odvolání z funkce ve v.v.
+120	203	Výzva na podání žaloby dle § 100 odst. 2
+118	963	Odvolání plné moci
+117	667	Doplňková informace žalovaného/odpůrce
+116	900	VS - Převzetí odvolání nadřízeným soudem
+115	86	Usnesení o zrušení předběžného opatření
+114	741	Usnesení - o připuštění změny návrhu
+113	418	Návrh na rozhodnutí o hlasovacím právu
+112	708	Sdělení vymáhajícího úředníka
+112	1041	Usnesení o odmítnutí/zastavení námitek
+111	32	Sdělení finančního úřadu
+111	31	Sdělení známého věřitele o pohledávce
+111	1003	Výpis z CEO
+110	688	Přílohy spisu
+110	674	Předvolání účastníka k přípravnému jednání
+109	918	NS – Rozhodnutí NS o dovolání – zamítnutí
+108	678	Doplňující rozsudek
+108	515	Rozhodnutí NS o dovolání - zrušení a vrácení soudu 1. stupně
+106	495	Záznam o složení zálohy
+105	944	Doplnění částečného zpětvzetí
+104	685	Převedení jinému soudu
+101	791	Usnesení o přibrání tlumočníka
+101	517	Rozhodnutí NS o dovolání - jinak
+101	120	Usnesení o změně věřitelského orgánu v souvislosti s postupem pohledávky
+100	84	Usnesení o tom, že dlužník není v úpadku
+100	813	Usnesení o zrušení usnesení a zastavení řízení
+100	721	Usn. o osvob. od SOP v plném rozsahu a ustan.zástupce
+95	241	Výzva
+94	90	Usnesení o hotových výdajích a odměně předběžného správce
+94	671	Předvolání stát.zastupitelství k jednání nebo provedení důkazu
+94	648	PO-usnesení o nařízení předběžného opatření
+93	657	Prodloužená lhůta k napsání rozhodnutí
+92	739	Usnesení - o připuštění dalšího účastníka do řízení
+92	153	Usnesení o odmítnutí návrhu na povolení reorganizace pro vady
+90	862	Žádost na katastrální úřad
+89	919	NS – Rozhodnutí NS o dovolání – zastavení řízení
+87	876	Žádost/návrh na vydání opravného usnesení
+86	920	NS – Rozhodnutí NS o dovolání – zrušení a vrácení odvolacímu soudu
+86	879	Urgence vrácení zapůjčeného spisu
+86	37	Sdělení Katastru nemovitostí
+82	729	Usnesení - o nepřipuštění vedlejšího účastníka
+82	67	Usnesení o vyhlášení moratoria
+81	938	Návrh dle § 107a o.s.ř.
+81	853	Záznam z účtárny o vrácení
+81	683	Předvolání znalce
+81	614	Usnesení o ustanovení opatrovníka pro doručování
+81	353	Záznam o složení peněz do soudní úschovy
+80	866	Žádost o doručení
+80	775	Usnesení o procesním nástupnictví § 107a o.s.ř.
+80	107	Usnesení o nepotvrzení správce zvoleného schůzí věřitelů
+78	424	Návrh veřitelského výboru
+78	154	Usnesení o vzetí na vědomí zpětvzetí návrhu na povolení reorganizace
+77	907	VS - Usnesení o tom, zda je soudce vyloučen
+77	789	Usnesení o ustanovení advokáta opatrovníkem
+77	1042	Usnesení o potvrzení/změně/vyhovění námitkám
+76	670	Předvolání osoby/statut.orgán práv.osoby
+75	73	Usnesení o zastavení řízení pro zpětvzetí insolvenčního návrhu
+75	179	Usnesení o odejmutí osvobození od placení dosud neuspokojených pohledávek
+74	118	Usnesení o odměně a náhradě nutných výdajů likvidátora
+72	743	Usnesení - o vyhovění
+72	371	Informační zpráva
+71	903	VS - Protokol o hlasování
+71	885	Žádost o sdělení čísla účtu
+68	161	Usnesení o zamítnutí reorganizačního plánu
+66	719	Usn. o částečném osvobození od SOP
+66	10	Návrh na moratorium
+65	987	Doplnění zpětvzetí
+65	113	Usnesení o zrušení usnesení schůze věřitelů
+64	805	Usnesení o zproštění funkce opatrovníka
+64	652	PO-usnesení o zamítnutí
+63	489	Výzva k odstranění odlišnosti návrhů
+62	943	Návrh na spojení věcí
+62	768	Usnesení o neustanovení zástupce
+62	603	Usnesení o zamítnutí jednoho z insolvenčních návrhů
+62	455	Usnesení o nepotvrzení volby v.v.
+62	114	Usnesení o zamítnutí návrhu na zrušení usnesení schůze věřitelů
+59	986	Potvrzení o přijetí
+59	891	VS - Rozsudek -zrušeno a vráceno
+59	170	Usnesení o neúčinnosti zpětvzetí návrhu na povolení oddlužení
+57	846	Zaslání dovolání
+57	771	Usnesení o odměně zástupci (ex offo)
+55	694	Půjčení spisu - bez S.O.
+54	913	NS – Protokol o hlasování
+54	17	Návrh na přeměnu reorganizace v konkurs
+52	345	Návrh na zrušení předběžného opatření
+51	1052	Usnesení o zamítnutí návrhu na povolení oddlužení a zastavení řízení
+50	883	Žádost o nahlédnutí do spisu
+50	774	Faxové podání
+50	746	Usnesení - o zamítnutí žádosti o prominutí zmeškání lhůty
+50	530	Návrh reorganizačního plánu
+50	1051	Usnesení o odmítnutí návrhu na povolení oddlužení a zastavení řízení
+49	858	Doložka právní moci
+49	837	Výzva
+48	980	Platební poukaz - tlumočné
+48	681	Předvolání zástupce účastníka k přípravě jednání
+48	151	Usnesení o omezení nakládat s majetkovou podstatou
+47	409	Dovolání - zpětvzetí dovolání
+46	673	Předvolání tlumočníka
+45	510	Převzetí věci vrchním soudem
+45	1043	Usnesení o odmítnutí popření pohledávky přihlášeným věřitelem
+44	69	Usnesení o prodloužení moratoria
+44	422	Návrh na změnu předběžného opatření
+43	945	Návrh na určení lhůty (§ 174a zák.č.6/2002 Sb.)
+42	981	Platební poukaz - znalečné
+42	849	Zaslání žaloby žalovanému
+42	740	Usnesení - o připuštění vedlejšího účastníka do řízení
+42	651	PO-usnesení o odmítnutí
+42	150	Usnesení o zákazu nakládat s majetkovou podstatou
+41	4	Změna v číselníku událostí
+41	36	Sdělení Střediska cenných papírů
+41	152	Usnesení o odmítnutí návrhu na povolení reorganizace pro opožděnost
+40	914	NS – Zaslání rozhodnutí dovolacího soudu a vrácení spisu
+40	696	Referát pro v.s.ú.
+40	549	Zánik moratoria - po insolvenčním návrhu
+39	472	Usnesení o zániku pohledávky
+38	453	Soupis majetkové podstaty
+37	735	Usnesení - o povinnosti zaplatit NŘ
+37	551	Návrh na prodloužení moratoria
+36	912	NS – Převzetí věci Nejvyšším soudem
+36	797	Usnesení o výzvě - zvolení advokáta pro dovolání
+36	753	Částečný rozsudek
+34	733	Usnesení - o nepřipuštění změny návrhu
+34	656	Oznámení o procesním nástupnictví
+34	533	Sdělení Ministerstva vnitra (auta)
+33	81	Usnesení o zastavení řízení pro nedostatek podmínky řízení
+33	808	Usnesení o zproštění funkce znalce
+33	460	Usnesení o neschválení dohody o vypořádání SJM
+32	759	Usnesení - zpětvzetí neúčinné
+32	736	Usnesení - o prominutí pořádkové pokuty
+32	159	Usnesení o schválení změny reorganizačního plánu
+31	811	Usnesení o zrušení rozsudku a zastavení řízení
+31	11	Návrh na zrušení moratoria
+29	922	NS – Rozhodnutí NS o dovolání – zrušení a vrácení soudu I. stupně
+29	856	Zpětvzetí návrhu po vydání rozhodnutí
+29	754	Elektronické podání
+29	732	Usnesení - o nepřipuštění zastoupení
+29	469	Usnesení o vyloučení z rozvrhu
+29	21	Návrh - zpětvzetí
+29	198	Výzva k předložení reorganizačního plánu
+28	882	Vyúčtování náhrad z používání vozidla
+28	68	Usnesení o odmítnutí návrhu na moratorium
+27	160	Usnesení o neschválení změny reorganizačního plánu
+27	132	Usnesení o stanovení lhůty pro splnění pohledávky za podstatou a určení části majetkové podstaty, která bude k úhradě použita
+26	916	NS – Rozhodnutí NS o dovolání – jinak
+26	915	NS – Zaslání rozhodnutí dovolacího soudu bez spisu
+24	809	Usnesení o zproštění zastupování
+24	34	Sdělení živnostenského úřadu
+23	872	Žádost o předvedení
+23	16	Návrh změny reorganizačního plánu
+22	977	Platební poukaz
+22	967	OP - podání odvolání do PO
+22	936	Usnesení o zamítnutí námitky podjatosti
+22	1011	NS - Přípis
+21	994	Poukaz účtárně na vrácení zálohy
+21	960	Odůvodnění dovolání
+21	816	Usnesení ÚS - jiné
+21	796	Jistota
+21	548	Zánik moratoria
+20	875	Žádost/návrh na ustanovení opatrovníka
+20	430	Platební poukaz
+19	860	Žádost
+19	728	Usnesení - o nepřipuštění dalšího účastníka
+19	714	Upřesnění žalobce/navrhovatele
+19	558	Usnesení o prodloužení moratoria - po insolvenčním návrhu
+19	524	Protokol o hlasování
+18	993	Poukaz účtárně na vrácení jistoty
+18	979	Platební poukaz - svědečné
+18	972	Oznámení katastrálnímu úřadu
+18	835	Vyrozumění o odročení nebo odvolání přípravy jednání
+18	778	Usnesení o přerušení řízení po vydání rozhodnutí
+18	467	Usnesení o ukončení lhůty k předložení reorganizačního plánu
+18	1047	Usnesení o zaplacení zálohy na náklady důkazu
+17	731	Dotaz
+17	705	Sdělení
+17	665	Předložení originálu směnky
+17	655	Povinnost zaplatit Sop dle rozhodnutí
+17	508	Zaslání rozhodnutí odvolacího soudu
+17	419	Návrh na úpravu seznamu přihlášených pohledávek
+17	368	Náhradní doručení
+16	807	Usnesení o zproštění funkce tlumočníka
+16	803	Usnesení o změně a zastavení
+16	757	Usnesení - zamítnutí návrhu na zrušení předběžného opatření
+16	704	Rozšíření žaloby
+16	599	Zpráva o mimořádných splátkách dle § 412 odst. 1 písm. b)
+16	452	Souhlas s určením zastupující osoby
+16	1035	Usnesení o nezveřejnění insolvenčního návrhu
+16	1016	NS - Rozhodnutí NS o dovolání - měnící
+15	666	Předložení spisu dle § 104a o.s.ř.
+15	491	Zahraniční insolvenční správce
+14	557	Usnesení o prodloužení moratoria
+14	388	Příprava jednání
+14	196	Výzva na odstranění vad návrhu na vynětí majetku
+14	1017	NS - Protokol o vyhlášení rozsudku
+13	948	Návrh na zajištění důkazů
+13	884	Žádost o zaslání spisu k nahlédnutí
+13	604	Usnesení o zastavení řízení o návrhu na moratorium
+13	426	Omluva
+12	908	NS – Rozhodnutí o delegaci
+12	71	Usnesení o nevyhovění návrhu na zrušení moratoria
+12	686	Přílohový spis
+12	479	Usnesení o uplynutí lhůty
+12	330	Změna XSD dokumentu poznámky
+12	224	Záznam o nahlédnutí do spisu
+12	219	Předkládací zpráva
+12	191	Výzva věřitelům k podávání přihlášek pohledávek
+11	910	OP - Usnesení o zamítnutí žaloby pro zmatečnost
+11	89	Usnesení o záloze na náklady předběžného správce
+11	644	Nový nápad po vyloučení
+11	632	Usnesení o neschválení zprávy o reorganizačním plánu
+11	587	Vykonatelnost
+11	35	Sdělení Ministerstva vnitra (auta)
+11	1010	NS - Rozhodnutí NS - výzva
+10	964	Odvolání vzato zpět
+10	924	Oddělení spojené věci po právní moci
+10	871	Žádost o prominutí zmeškání lhůty
+10	825	Vrácení spisu z jiného soudu k doplnění - v S.O.
+10	788	Usnesení o uložení povinnosti
+10	783	Usnesení o smíru - dílčí
+10	720	Doslání podání na VS
+10	690	Přípis
+10	586	Usnesení o zamítnutí žaloby
+10	211	Vyrozumění ČNB o prohlášení konkursu
+10	180	Usnesení o zániku osvobození dlužníka od placení dosud neuspokojených pohledávek
+9	821	Vrácení příloh
+9	662	Protokol sepsaný mimo jednání
+9	328	Rozhodnutí opravné usnesení
+8	909	NS – Rozhodnutí o podjatosti
+8	767	Usnesení o částečném zrušení usnesení
+8	697	Rejstřík trestů
+8	482	Vyhláška o hlasování
+8	38	Sdělení dlužníka o nepředložení reorganizačního plánu
+8	137	Usnesení o vyhovění návrhu nájemce na zrušení výpovědi nájemní smlouvy
+7	932	OP - Žaloba pro zmatečnost
+7	834	Vyrozumění o odročení nebo odvolání provedení důkazu
+7	738	Usnesení - o připuštění částečné změny návrhu
+7	709	Skončená věc
+7	677	Předvolání účastníka k výslechu mimo jednání
+7	550	Usnesení o zrušení moratoria - po insolvenčním návrhu
+7	144	Usnesení o opatření k vynucení splnění uložených povinností
+7	142	Usnesení o zrušení rozhodnutí o schválení dohody o vypořádání SJM
+7	129	Usnesení o opatřeních potřebných k zjištění majetkové podstaty a způsobu zjištění
+6	983	Pokračování v přerušeném řízení
+6	939	Návrh na delegaci z důvodu vhodnosti
+6	838	Mezitímní rozsudek
+6	80	Usnesení o způsobu řešení úpadku reorganizací dle usnesení schůze věřitelů
+6	712	Splátkový kalendář - výzva na Sop
+6	245	Usnesení na doplnění odvolání
+6	1019	Sdělení o vzájemné souvislosti spisů
+5	975	Platba jiná
+5	923	NS – Rozhodnutí NS o dovolání – zrušení a zastavení řízení
+5	899	OP - Usnesení o zamítnutí obnovy
+5	859	OP - Návrh na povolení obnovy řízení
+5	718	Úschova soudu
+5	639	Rozhodnutí o žalobě pro zmatečnost - zrušení rozhodnutí
+5	590	VS - Usnesení doplňující
+5	431	Pokračování v řízení po zpětvzetí
+4	978	Platební poukaz - likvidátor,ustan.advokát
+4	950	Návrh na zrušení rozsudku pro zmeškání
+4	921	OP - Usnesení o vyhovění žalobě - zrušení rozhodnutí I.stupně
+4	911	NS – Rozhodnutí o příslušnosti
+4	901	VS - Opětovné převzetí odvolání nadřízeným soudem
+4	874	Žádost o zaslání spisu s odpovědí
+4	869	Žádost o prodloužení lhůty
+4	836	Vyrozumění účastníků a zástupců o provedení důkazu
+4	818	OP - Rozhodnutí ÚS o odmítnutí stížnosti
+4	817	Konkurs prohlášen na žalobce/navrhovatele
+4	810	Usnesení o zproštění znalce a jmenování nového
+4	737	Usnesení - o prominutí zmeškání lhůty
+4	65	Seznam přihlášených pohledávek - výpis
+4	653	PO-usnesení o zastavení
+4	543	Usnesení, kterým se věřiteli ukládá, aby plnil ve prospěch majetkové podstaty dle § 178 nebo § 179
+4	504	Rozhodnutí o odvolání - zrušeno a vráceno
+4	412	Námitky dle § 373 IZ
+4	220	Svolání
+4	1014	NS - Rozhodnutí NS - odložení vykonatelnosti
+3	982	Plná moc
+3	971	Opravné usnesení
+3	962	Odvolání jiné
+3	946	Návrh na určení příslušnosti soudu
+3	873	Žádost o stanovení odměny ustanoveného advokáta
+3	863	Žádost na OR
+3	828	Konkurs prohlášen na žalovaného/odpůrce
+3	820	Vrácení podání k opravě
+3	711	Fotokopie směnky
+3	70	Usnesení o zrušení moratoria
+3	695	Referát
+3	659	Prodloužení lhůty k předložení spisu
+3	640	Rozhodnutí o žalobě pro zmatečnost - zamítnutí žaloby
+3	503	Rozhodnutí o odvolání - změněno
+3	136	Usnesení o neplatnosti právního úkonu
+3	112	Usnesení o rozsahu hlasovacího práva na schůzi věřitelů
+3	1013	NS - Rozhodnutí NS - procesní nástupnictví
+2	997	PO-usnesení o část.nařízení a část.zamítnutí
+2	954	Odpověď na reklamaci doručenky
+2	904	VS - Usnesení o delegaci
+2	861	Žádost na RT
+2	852	Záznam o složení
+2	844	Zaplacení Sop převodem u jiného soudu
+2	827	Vyjádření
+2	819	OP - Ústavní stížnost
+2	793	Usnesení o ustanovení znalce
+2	785	Informativní výslech
+2	770	Usnesení o odkladu vykonatelnosti
+2	766	Usnesení o částečném zrušení rozsudku
+2	660	Protokol o provedení důkazů mimo jednání
+2	650	PO-usnesení o nařízení se zrušuje
+2	528	Rozhodnutí o místní příslušnosti
+2	506	Rozhodnutí o odvolání - odmítnuto
+2	502	Rozhodnutí o odvolání - potvrzeno
+2	246	Usnesení k vyjádření se k odvolání
+2	1020	Zrušení vzájemné souvislosti spisů
+2	1015	NS - Rozhodnutí NS - odložení právní moci
+1	995	Poukaz účtárně na vrácení pokuty
+1	940	Návrh na pokračování v řízení
+1	717	Úřední záznam
+1	710	Doručení soudním doručovatelem
+1	700	Doručení podle Haagské úmluvy
+1	669	Předvolání osoby s uloženou povinností při dokazování
+1	668	Předvolání ke smírčímu řízení
+1	589	VS - Rozsudek doplňující
+1	525	Žádost o zapůjčení spisu
+1	507	Rozhodnutí o odvolání - jinak
+1	499	Zvláštní přezkumné jednání
+1	399	Rozhodnutí o dovolání - zrušeno a vráceno soudu 1. stupně
+1	311	Rozhodnutí o odvolání ve věci zproštění funkce insolv. správce, jeho výdajích a způsob úhrady - jiné
+1	166	Usnesení o zastavení řízení dle § 427
+1	1048	Vzájemný návrh
+1	1023	Výpis údajů ze základních registrů
