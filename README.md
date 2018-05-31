@@ -469,3 +469,18 @@ Získání a zpracování dat z [insolvenčního rejstříku](https://isir.justi
       1 Rozhodnutí o dovolání - zrušeno a vráceno soudu 1. stupně
       1 Pokyn účtárně k vymáhání
 ```
+
+# Různé hodnoty ve vnitřním XML
+```
+druhOsoby P,PODNIKATEL,SPRÁV_INS,F
+druhRoleVRizeni SPRÁVCE,DLUŽNÍK
+druhPravniForma s.r.o.,s.p. likv,v.o.s.,a.s.,spol s r.o,o.p.s.,družstvo
+adresa druhAdresy:TRVALÁ,druhAdresy:SÍDLO ORG.,druhAdresy:SÍDLO FY
+titulPred Mgr.,,Bc.,JUDr..,Bc. Ing.,RNDr.,Dr.,Doc. Dr. Ing.,RNDr. Ing.,PhDr.,JUDr. Mgr.,Mgr. Ing.,JUDr.ing.,Mgr.,Dis.,JUDr.,Ing.,Ing.,JUDr. Ing.,Ing,MVDr.,Mgr., Ing.,Ing. Mgr.,ing.,Ing. Bc.,MUDr.,JUDr. ing.,Ing.,Mgr.,,Doc. Ing.,Ing.,,JUDr.
+idOsobyPuvodce KSSTCAB,KSSCEUL,KSZPCPM,KSJIMBM,MSPHAAB,KSSEMOS,KSJICCB,CCA,KSVYCHK
+zeme CZ,Česká republika,Česko,CZE
+titulZa ThBc.,IWE,, ADVOKÁTka,ADVOKÁT,LL.M.,MUDr.,ADVOKÁTka,, SKP,ml.,CSc.,. SKP,, ADVOKÁT,Ph.D.,Ing.,,BBS,, ins.správce,DiS.
+druhSpravce SPRÁVCE,PREDB.SPR.,INS SPRÁV,ODDĚL SPR,ZÁST SPR
+priznakAnInterniCisUdalost T,F
+druhStavRizeni KONKURS,VYRIZENA,OBZIVLA,ZRUŠENO VS,ODDLUŽENÍ,MORATORIUM,ODSKRTNUTA,PRAVOMOCNA,NEVYRIZENA,MYLNÝ ZÁP.,ÚPADEK
+```
