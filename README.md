@@ -1,7 +1,34 @@
-# mapa-oddluzeni
-Získání a zpracování dat z [insolvenčního rejstříku](https://isir.justice.cz/) ve formátu vhodném pro mapu exekucí.
+# Mapa insolvencí (oddlužení)
 
+Cílem je získání a zpracování dat z [insolvenčního rejstříku](https://isir.justice.cz/)
+a jejich vizualizace
+
+# Odkazy
+* [GIT](https://github.com/KodujProCesko2018/mapa-oddluzeni)
 * [Kódy soudů](https://ispis.cz/soudy)
+* [SOAP služba](https://isir.justice.cz:8443/isir_cuzk_ws/IsirWsCuzkService) Insolvenčního rejstříku
+* [Polygony krajů](http://arccr-arcdata.opendata.arcgis.com/datasets/6475ee085a0d498fb9075fd6320d16f2_8)
+* [Článek o oddlužení](https://www.irozhlas.cz/ekonomika/oddluzeni-agentury-robert-pelikan_1803101314_pj)
+* [Kraje GEOJSON](http://mapaexekuci.cz/mapa/kraje.geojson)
+* [Okresy GEOJSON](http://mapaexekuci.cz/mapa/okresy.geojson)
+* [ORP GEOJSON](http://mapaexekuci.cz/mapa/orp.geojson)
+* [Obce GEOJSON](http://mapaexekuci.cz/mapa/obce.geojson)
+
+# Zajímavosti
+* Za rok 2017 je v databázi rejstříku 4 384 568 záznamů. To jsou 3 za sekundu.
+  Ale dost jich bude asi automatických (jedna akce v editoru může vyvolat 10
+  záznamů v DB).
+
+
+# Události, které nás zajímají
+* Alternativní začátek insolvence
+  * 175 Usnesení o schválení oddlužení plněním splátkového kalendáře
+  * 174 Usnesení o schválení oddlužení zpeněžením majetkové podstaty
+* Konec insolvence (snad 1:1)
+  * 177 Usnesení o vzetí na vědomí splnění oddlužení
+  * 178 Usnesení o osvobození dlužníka od placení dosud neuspokojených pohledávek
+
+Pěkný typ události: *Usnesení o zamítnutí návrhu na zrušení usnesení schůze věřitelů*
 
 # Typy událostí v DB v letech 2008 až 2011
 ```

@@ -1,4 +1,2 @@
-OUT.xml
-*.csv
 .idea/*
 python-client/.vscode/*
