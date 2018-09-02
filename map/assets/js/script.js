@@ -1,15 +1,6 @@
-const POI = 'poi';
-const POI08 = 'poi08';
-const POI6 = 'poe6';
-const POE = 'poe';
-const POE7 = 'poe7';
-const POE6 = 'poe6';
-
-//var rok = "2008";
-var rok = "2017";
-var valUj = "kraje";
-var valIndi = "poi";
-var viewPrehled = 0;
+var rok = "2017"; // defaultni rok
+var valUj = "kraje"; // co zobrazovat
+var valIndi = "poi"; // jaka statistika
 var lObce;
 var lOkresy;
 var detail = 0;
@@ -52,63 +43,33 @@ L.control.zoom({
   position: 'bottomright'
 }).addTo(map);
 
-/*
-var icko = L.control({
-  position: 'bottomright'
-});
-icko.onAdd = function(map) {
-  this._div = L.DomUtil.create('div', 'icko');
-  this._div.innerHTML =
-    '<a id="icko_rozbal" onclick="icko.rozbal()" href="#" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANOSURBVGhD7dlJyE1xHMbx15wMKcPCwspQosRCiR0bhOxQWIgdkQVhgQUZVpRiYSjTwsJYEtmQZAoRC0IiMhTKzPdZ3Hq7Pe85/+Hce6X3qc+C/r9z733vPf/hd9o6859nOOZjMw7jJC7gLI5jO5ZgArrhn8pE7MIL/InwHscwAz3QknTFXNyAe5Ox9EdYjt5oWsbhKtwbyvUMs9HQ6FtYjx9wb6JKur/6o/L0xTm4F22Ux9DkUVkG4TrcizXaa4xHdvRNXIN7kWZ5g6xvRvfEebiLx/qNl0i9vzQJDERS1sFdNNY+1N5EL6zGN7ixRc6gC6KiKfYn3AVjnIDLWrjxZZYhOPrUVa0TWrVdhsCNL/MOgxEUrdjuIimmwmUA3PgQOxGUqrYdshcuS+HGh/gELQmF0QbQFefYgJ6oZR4+w40NtQqF2Q1XmOsjtKi+avd/OW6jMLFb8VYaBhutnq7gX7UYNgvgCmL8gk6EOltMwhhMx0bo5+VqUu2BzSa4glA7MBQdZSS0DrjaFJdgcwiuIIR2AaMwB5qVtOC56Dzj6lM8gc0puIIQ+iD6WdX+fQcu09C+LscH2FyEK0ihRctlJtz4FPrj2Wh36QpSPISLJgE3PoUmD5ujcAUpDsIl5z6spzXPZhtcQYqFqI921TpcufEptEO3UQfQFcTSTe9mLZ1x3PhUB2CjNqYriHUTLmvgxqfS/WajXqzamK4ohvq+Lpfhxqcaiw6jXqwrijEZ9VE35jvc+BTPUXh+z53nv8I1pKtcCGULCtMd+rSuOMRduFS5fmgyGYHSrIC7QIiONnI60bnxKfScJShq7ash5i5S5h5ctCvWzuE+TiN1X6f7bDSCo12su1CIKSjLfrjaMlq0o3ME7mJl3mIW6mcVtYDUPUntmT1AH0SnHx7BXTSEPtAV6PnhLeQ8V/kCnTaTo3O8uuHu4s2i7bq+4ezo+USrPoy+xUWoLDrGPoV7sUZRE08LdOXRo4EqD19FdDDLuifKoplIrf0quyHt6aekKTZpdkqJmsjqiuf2cGu07dCGNWqxqzL6ua2EuibuDZbRDmIrgvZOzYp6sZph1AFUR0Z9J51v9NdWo0BnbD1Y1aqu/ZzOE4Vb8c50puVpa/sLVe+J6OGq49MAAAAASUVORK5CYII=" width="35px"></a>';
-  return this._div;
-};
-
-icko.addTo(map);
-
-icko.rozbal = function() {
-  icko._div.innerHTML = '<div class="info"><h4>Zdroj dat</h4>' +
-    '<ul><li><b>Centrální evidence exekucí</b> spravovaná Exekutorskou komorou ČR</li>' +
-    '<li><b>Český statistický úřad</b></li></ul>' +
-    '<h4>Časová období</h4>' +
-    '<ul><li><b>2016</b> a <b>2017</b></li></ul>' +
-    '<h4>Mapa obsahuje</h4>' +
-    '<ul><li><b>pouze fyzické osoby</b></li>' +
-    '<li><b>počet obyvatel starších 15 let</b></li>' +
-    '<li><b>počet osob v exekuci</b></li>' +
-    '<li><b>celkový počet exekucí</b></li>' +
-    '<li><b>vymáhaná jistina</b> (částka bez nákladů na vymáhání a úroků z prodlení)</li>' +
-    '<li><b>věková struktura</b></li>' +
-    '<li><b>počet exekucí u jednotlivých osob</b> (tzv. vícečetnost exekucí)</li>' +
-    '<li><b>ukazatele kombinující výše uvedená data</b></li></ul>' +
-    '<p>Upozorňujeme, že v mapě se mohou objevit nepřesnosti vzniklé při exportu dat z Centrální evidence exekucí. </p>' +
-    '<p>* Jistina za rok 2016 obsahuje fyzické i právnické osoby. Jistina za rok 2017 je již očištěna a obsahuje pouze fyzické osoby.</p>' +
-    '<div style="text-align: center"><img src="images/ekcr.jpg" height="100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/csu.png" height="40" style="vertical-align: top;"></div>' +
-    '<div class="right"><a onclick="icko.sbal()" href="#" ><img src="images/70206.png" width="12px"></a></div></div>';
-};
-
-icko.sbal = function() {
-  icko._div.innerHTML = '<a id="icko_rozbal" onclick="icko.rozbal()" href="#" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANOSURBVGhD7dlJyE1xHMbx15wMKcPCwspQosRCiR0bhOxQWIgdkQVhgQUZVpRiYSjTwsJYEtmQZAoRC0IiMhTKzPdZ3Hq7Pe85/+Hce6X3qc+C/r9z733vPf/hd9o6859nOOZjMw7jJC7gLI5jO5ZgArrhn8pE7MIL/InwHscwAz3QknTFXNyAe5Ox9EdYjt5oWsbhKtwbyvUMs9HQ6FtYjx9wb6JKur/6o/L0xTm4F22Ux9DkUVkG4TrcizXaa4xHdvRNXIN7kWZ5g6xvRvfEebiLx/qNl0i9vzQJDERS1sFdNNY+1N5EL6zGN7ixRc6gC6KiKfYn3AVjnIDLWrjxZZYhOPrUVa0TWrVdhsCNL/MOgxEUrdjuIimmwmUA3PgQOxGUqrYdshcuS+HGh/gELQmF0QbQFefYgJ6oZR4+w40NtQqF2Q1XmOsjtKi+avd/OW6jMLFb8VYaBhutnq7gX7UYNgvgCmL8gk6EOltMwhhMx0bo5+VqUu2BzSa4glA7MBQdZSS0DrjaFJdgcwiuIIR2AaMwB5qVtOC56Dzj6lM8gc0puIIQ+iD6WdX+fQcu09C+LscH2FyEK0ihRctlJtz4FPrj2Wh36QpSPISLJgE3PoUmD5ujcAUpDsIl5z6spzXPZhtcQYqFqI921TpcufEptEO3UQfQFcTSTe9mLZ1x3PhUB2CjNqYriHUTLmvgxqfS/WajXqzamK4ohvq+Lpfhxqcaiw6jXqwrijEZ9VE35jvc+BTPUXh+z53nv8I1pKtcCGULCtMd+rSuOMRduFS5fmgyGYHSrIC7QIiONnI60bnxKfScJShq7ash5i5S5h5ctCvWzuE+TiN1X6f7bDSCo12su1CIKSjLfrjaMlq0o3ME7mJl3mIW6mcVtYDUPUntmT1AH0SnHx7BXTSEPtAV6PnhLeQ8V/kCnTaTo3O8uuHu4s2i7bq+4ezo+USrPoy+xUWoLDrGPoV7sUZRE08LdOXRo4EqD19FdDDLuifKoplIrf0quyHt6aekKTZpdkqJmsjqiuf2cGu07dCGNWqxqzL6ua2EuibuDZbRDmIrgvZOzYp6sZph1AFUR0Z9J51v9NdWo0BnbD1Y1aqu/ZzOE4Vb8c50puVpa/sLVe+J6OGq49MAAAAASUVORK5CYII=" width="35px"></a>';
-};
-
-*/
-
 var prehled = L.control({
   position: 'topleft'
 });
+
 prehled.onAdd = function(map) {
   this._div = L.DomUtil.create('div', 'info prehled');
   this._div.innerHTML =
-    '<div id="prehledTable"><table><tr><td class="bold">Česká republika</td><td class="right bold">2017</td><td class="right">změna</td></tr>' +
-    '<tr><td>Počet osob v exekuci</td><td class="right bold">863 tis.</td><td class="right red">+3,4 %</td></tr>' +
-    '<tr><td>Počet osob se 3 a více exekucemi</td><td class="right bold">493 tis.</td><td class="right red">+0,8 %</td></tr>' +
-    '<tr><td>Podíl osob v exekuci</td><td class="right bold">9,7 %</td><td class="right red">+0,4 p.b.</td></tr>' +
-    '<tr><td>Celkový počet exekucí</td><td class="right bold">4,67 mil.</td><td class="right red">+4,8 %</td></tr>' +
+    '<div id="prehledTable"><table><tr>' +
+        '<td class="bold">Česká republika</td>' +
+        '<td class="right bold">2017</td>' +
+        '<td class="right">změna</td></tr>' +
+    '<tr><td>Počet osob v insolvenci</td>' +
+        '<td class="right bold">863 tis.</td>' +
+        '<td class="right red">+3,4 %</td></tr>' +
+    '<tr><td>Podíl osob v insolvenci</td>' +
+        '<td class="right bold">9,7 %</td>' +
+        '<td class="right red">+0,4 p.b.</td></tr>' +
+    '<tr><td>Celkový počet insolvencí</td>' +
+        '<td class="right bold">4,67 mil.</td>' +
+        '<td class="right red">+4,8 %</td></tr>' +
+    '<tr><td>Podíl insolvencí k exekucím</td><td class="right bold">??? %</td>' +
     '<tr><td>Vymáhaná jistina</td><td class="right bold">239 mld. Kč</td><td class="right">&nbsp;</td></tr>' +
     '<tr><td><span class="italic">údaje jsou pouze za fyzické osoby</span></td></tr></table></div><div class="right"><a id="togglePrehledLink" onclick="togglePrehled()" href="#"><img src="images/70206.png" width="12px"></a></div>';
   return this._div;
 };
 
-//prehled.addTo(map);
+prehled.addTo(map);
 
 var zrusit = L.control({
   position: 'topright'
@@ -174,13 +135,13 @@ function showSearchPoints(geojson) {
 function getColor2(props) {
   try {
     if (valIndi == "poi_poe") {
-      d = props[POI + rok.slice(2, 4)] / props[POE + rok.slice(2, 4)];
+      d = props['poi' + rok.slice(2, 4)] / props['poe' + rok.slice(2, 4)];
     } else if (valIndi == "poi") {
-      d = props[POI + rok.slice(2, 4)];
+      d = props['poi' + rok.slice(2, 4)];
       console.log(d);
     } else if (valIndi == "poi_change") {
-      if (props[POI6] > 0) {
-        d = (props[POI08] / props[POI6] - 1) * 100;
+      if (props['poe6'] > 0) {
+        d = (props['poi08'] / props['poe6'] - 1) * 100;
       } else {
         d = 0
       }
@@ -398,19 +359,19 @@ function makeDivInfo(feature, index) {
   } else if (valUj == "obce") {
     heading = '<b>' + props.b.toUpperCase() + '</b>&nbsp;&nbsp;<a title="Resetovat" href="#" onclick="cancel(' + index + ');return false;"><img src="images/70206.png" width="12px"></a><br /><span class="italic">' + props.r.replace(/ /g, '&nbsp;') + '</span><br /><span class="italic">' + props.k.replace(/ /g, '&nbsp;') + '</span><br />';
   }
-  t = heading + '<b>' + nulaToNeposkytnuto(feature.properties[POI + rok.slice(2, 4)] * 100 / feature.properties["o"], 2) + ' %</b><br />';
+  t = heading + '<b>' + nulaToNeposkytnuto(feature.properties['poi' + rok.slice(2, 4)] * 100 / feature.properties["o"], 2) + ' %</b><br />';
   if (rok == "2017") {
-    if (props[POI08] >= props[POI6]) {
+    if (props['poi08'] >= props['poe6']) {
       plus = "+";
     } else {
       plus = "";
     }
-    t += plus + nulaToNeposkytnuto((props[POI08] / props[POI6] - 1) * 100, 1) + ' % (' + plus + nulaToNeposkytnuto((props[POI08] - props[POI6]) * 100 / props["o"], 2) + ' p.b.)<br />';
+    t += plus + nulaToNeposkytnuto((props['poi08'] / props['poe6'] - 1) * 100, 1) + ' % (' + plus + nulaToNeposkytnuto((props['poi08'] - props['poe6']) * 100 / props["o"], 2) + ' p.b.)<br />';
   }
-  t += nulaToNeposkytnuto(props["pe" + rok.slice(2, 4)] / props[POI + rok.slice(2, 4)], 1) + '<br />'
-  t += nulaToNeposkytnuto(props["c" + rok.slice(2, 4)] / props[POI + rok.slice(2, 4)]) + ' Kč'
+  t += nulaToNeposkytnuto(props["pe" + rok.slice(2, 4)] / props['poi' + rok.slice(2, 4)], 1) + '<br />'
+  t += nulaToNeposkytnuto(props["c" + rok.slice(2, 4)] / props['poi' + rok.slice(2, 4)]) + ' Kč'
   if (rok == "2017") {
-    t += '<div class="maly_detail"><div class="struktura">&nbsp;</div>' + nulaToNeposkytnuto((props["p3e7"] + props["p4e7"] + props["p5e7"]) * 100 / props[POI08]) + ' %<br />' + nulaToNeposkytnuto(props["pse7"] * 100 / props[POI08]) + ' %</div>'
+    t += '<div class="maly_detail"><div class="struktura">&nbsp;</div>' + nulaToNeposkytnuto((props["p3e7"] + props["p4e7"] + props["p5e7"]) * 100 / props['poi08']) + ' %<br />' + nulaToNeposkytnuto(props["pse7"] * 100 / props['poi08']) + ' %</div>'
   } else {
     t += '<div class="maly_detail"></div>';
   }
@@ -419,17 +380,17 @@ function makeDivInfo(feature, index) {
 t+=nulaToNeposkytnuto(props["m7"]) + ' Kč<br />' ;
   }
   t+=  nulaToNeposkytnuto(props["o"]) + '<br />' +
-    nulaToNeposkytnuto(props[POI + rok.slice(2, 4)]) + '<br />' +
+    nulaToNeposkytnuto(props['poi' + rok.slice(2, 4)]) + '<br />' +
     nulaToNeposkytnuto(props["pe" + rok.slice(2, 4)]) + '<br />';
   if (rok == "2017") {
-    t += '<div class="struktura">&nbsp;</div><div class="struktura">'+nulaToNeposkytnuto(props["pde7"] * 100 / props[POI08]) + ' %<br />' +
-      nulaToNeposkytnuto(props["pme7"] * 100 / props[POI08]) + ' %<br />' +
-      nulaToNeposkytnuto(props["pse7"] * 100 / props[POI08]) + ' %</div><div class="struktura">' +
-      nulaToNeposkytnuto(props["p1e7"] * 100 / props[POI08]) + ' %<br />' +
-      nulaToNeposkytnuto(props["p2e7"] * 100 / props[POI08]) + ' %<br />' +
-      nulaToNeposkytnuto(props["p3e7"] * 100 / props[POI08]) + ' %<br />' +
-      nulaToNeposkytnuto(props["p4e7"] * 100 / props[POI08]) + ' %<br />' +
-      nulaToNeposkytnuto(props["p5e7"] * 100 / props[POI08]) + ' %</div>';
+    t += '<div class="struktura">&nbsp;</div><div class="struktura">'+nulaToNeposkytnuto(props["pde7"] * 100 / props['poi08']) + ' %<br />' +
+      nulaToNeposkytnuto(props["pme7"] * 100 / props['poi08']) + ' %<br />' +
+      nulaToNeposkytnuto(props["pse7"] * 100 / props['poi08']) + ' %</div><div class="struktura">' +
+      nulaToNeposkytnuto(props["p1e7"] * 100 / props['poi08']) + ' %<br />' +
+      nulaToNeposkytnuto(props["p2e7"] * 100 / props['poi08']) + ' %<br />' +
+      nulaToNeposkytnuto(props["p3e7"] * 100 / props['poi08']) + ' %<br />' +
+      nulaToNeposkytnuto(props["p4e7"] * 100 / props['poi08']) + ' %<br />' +
+      nulaToNeposkytnuto(props["p5e7"] * 100 / props['poi08']) + ' %</div>';
   }
   t += '</div><div class="struktura">&nbsp;</div>';
   div.innerHTML = t;
@@ -548,35 +509,34 @@ function generateTooltip(feature) {
     if (valUj == "kraje") {
       t = '<table><tr><td class="grey bold">' + props.k.toUpperCase() + '</td><td class="right grey bold">' + rok + '</td></tr>';
       if (rok == "2017") {
-        t += '<tr><td class="poradi">Pořadí kraje <span class="netucne">(1 = nejhorší)</span></td><td class="right poradi">' + props[POI + rok.slice(2, 4) + "p"] + ' z 14</td></td>';
+        t += '<tr><td class="poradi">Pořadí kraje <span class="netucne">(1 = nejhorší)</span></td><td class="right poradi">' + props['poi' + rok.slice(2, 4) + "p"] + ' z 14</td></td>';
       }
     } else if (valUj == "okresy") {
       t = '<table><tr><td class="grey bold">okres ' + props.r.toUpperCase() + '</td><td class="right grey bold">' + rok + '</td></tr>' +
         '<tr><td class="grey italic">' + props.k + '</td><td class="right grey">&nbsp;</td></tr>';
       if (rok == "2017") {
-        t += '<tr><td class="poradi">Pořadí okresu <span class="netucne">(1 = nejhorší)</span></td><td class="right poradi">' + props[POI + rok.slice(2, 4) + "p"] + ' z 77</td></td>';
+        t += '<tr><td class="poradi">Pořadí okresu <span class="netucne">(1 = nejhorší)</span></td><td class="right poradi">' + props['poi' + rok.slice(2, 4) + "p"] + ' z 77</td></td>';
       }
     } else if (valUj == "orp") {
       t = '<table><tr><td class="grey bold">SO ORP ' + props.n.toUpperCase() + '</td><td class="right grey bold">' + rok + '</td></tr>' +
         '<tr><td class="grey italic">' + props.k + '</td><td class="right grey">&nbsp;</td></tr>';
       if (rok == "2017") {
-        t += '<tr><td class="poradi">Pořadí ORP <span class="netucne">(1 = nejhorší)</span></td><td class="right poradi">' + props[POI + rok.slice(2, 4) + "p"] + ' z 206</td></td>';
+        t += '<tr><td class="poradi">Pořadí ORP <span class="netucne">(1 = nejhorší)</span></td><td class="right poradi">' + props['poi' + rok.slice(2, 4) + "p"] + ' z 206</td></td>';
       }
     } else if (valUj == "obce") {
       t = '<table><tr><td class="grey bold">obec ' + props.b.toUpperCase() + '</td><td class="right grey bold">' + rok + '</td></tr>' +
         '<tr><td class="grey italic">okres ' + props.r + ', ' + props.k + '</td><td class="right grey">&nbsp;</td></tr>';
     }
     t += '<tr><td>Počet osob starších 15 let</td><td class="right">' + nulaToNeposkytnuto(props["o"]) + '</td></tr>' +
-      '<tr><td>Počet osob v exekuci</td><td class="right">' + nulaToNeposkytnuto(props[POI + rok.slice(2, 4)]) + '</td></tr>' +
-      '<tr><td class="vybrano">Podíl osob v exekuci</td><td class="vybrano right">' + nulaToNeposkytnuto(props[POI + rok.slice(2, 4)] * 100 / props["o"], 2) + ' %</td></tr>' +
-      '<tr><td>Celkový počet exekucí</td><td class="right">' + nulaToNeposkytnuto(props["pe" + rok.slice(2, 4)]) + '</td></tr>' +
-      '<tr><td>Průměrný počet exekucí na osobu</td><td class="right">' + nulaToNeposkytnuto(props["pe" + rok.slice(2, 4)] / props[POI + rok.slice(2, 4)], 1) + '</td></tr>';
+      '<tr><td>Počet osob v insolvenci</td><td class="right">' + nulaToNeposkytnuto(props['poi' + rok.slice(2, 4)]) + '</td></tr>' +
+      '<tr><td class="vybrano">Podíl osob v insolvenci</td><td class="vybrano right">' + nulaToNeposkytnuto(props['poi' + rok.slice(2, 4)] * 100 / props["o"], 2) + ' %</td></tr>' +
+      '<tr><td>Celkový počet insolvenci</td><td class="right">' + nulaToNeposkytnuto(props["pe" + rok.slice(2, 4)]) + '</td></tr>'
 
     if (rok == "2017") {
       t += '<tr><td><u>Detail osob v exekuci:</u></td></tr>' +
-        '<tr><td>Podíl (počet) dětí a mladistvých</td><td class="right">' + nulaToNeposkytnuto(props["pde" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + ' % (' + nulaToNeposkytnuto(props["pde" + rok.slice(2, 4)]) + ')</td></tr>' +
-        '<tr><td>Podíl (počet) osob ve věku 18 až 29 let</td><td class="right">' + nulaToNeposkytnuto(props["pme" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + ' % (' + nulaToNeposkytnuto(props["pme" + rok.slice(2, 4)]) + ')</td></tr>' +
-        '<tr><td>Podíl (počet) seniorů (65+)</td><td class="right">' + nulaToNeposkytnuto(props["pse" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + ' % (' + nulaToNeposkytnuto(props["pse" + rok.slice(2, 4)]) + ')</td></tr>'
+        '<tr><td>Podíl (počet) dětí a mladistvých</td><td class="right">' + nulaToNeposkytnuto(props["pde" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + ' % (' + nulaToNeposkytnuto(props["pde" + rok.slice(2, 4)]) + ')</td></tr>' +
+        '<tr><td>Podíl (počet) osob ve věku 18 až 29 let</td><td class="right">' + nulaToNeposkytnuto(props["pme" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + ' % (' + nulaToNeposkytnuto(props["pme" + rok.slice(2, 4)]) + ')</td></tr>' +
+        '<tr><td>Podíl (počet) seniorů (65+)</td><td class="right">' + nulaToNeposkytnuto(props["pse" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + ' % (' + nulaToNeposkytnuto(props["pse" + rok.slice(2, 4)]) + ')</td></tr>'
     }
 
   } else if (valIndi == "pove") {
@@ -601,14 +561,14 @@ function generateTooltip(feature) {
       t = '<table><tr><td class="grey bold">obec ' + props.b.toUpperCase() + '</td><td class="right grey bold">' + rok + '</td></tr>' +
         '<tr><td class="grey"><i>okres ' + props.r + ', ' + props.k + '</i></td><td class="right grey">&nbsp;</td></tr>';
     }
-    t += '<tr><td>Podíl (počet) osob v exekuci</td><td class="right">' + nulaToNeposkytnuto(props[POI + rok.slice(2, 4)] * 100 / props["o"], 2) + '% (' + nulaToNeposkytnuto(props[POI + rok.slice(2, 4)]) + ')</td></tr>' +
+    t += '<tr><td>Podíl (počet) osob v exekuci</td><td class="right">' + nulaToNeposkytnuto(props['poi' + rok.slice(2, 4)] * 100 / props["o"], 2) + '% (' + nulaToNeposkytnuto(props['poi' + rok.slice(2, 4)]) + ')</td></tr>' +
       '<tr><td class="bold">Z toho:</td></tr>' +
-      '<tr><td class="bold border_down">podíl (počet) osob s 1 exekucí</td><td class="bold border_down right">' + nulaToNeposkytnuto(props["p1e" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p1e" + rok.slice(2, 4)]) + ')</td></tr>' +
-      '<tr><td>podíl (počet) osob s 2 exekucemi</td><td class="right">' + nulaToNeposkytnuto(props["p2e" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p2e" + rok.slice(2, 4)]) + ')</td></tr>' +
-      '<tr><td>podíl (počet) osob s 3 – 9 exekucemi</td><td class="right">' + nulaToNeposkytnuto(props["p3e" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p3e" + rok.slice(2, 4)]) + ')</td></tr>' +
-      '<tr><td>podíl (počet) osob s 10 – 29 exekucemi</td><td class="right">' + nulaToNeposkytnuto(props["p4e" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p4e" + rok.slice(2, 4)]) + ')</td></tr>' +
-      '<tr><td class="border_down">podíl (počet) osob s 30 a více exekucemi</td><td class="right border_down">' + nulaToNeposkytnuto(props["p5e" + rok.slice(2, 4)] * 100 / props[POI + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p5e" + rok.slice(2, 4)]) + ')</td></tr>' +
-      '<tr><td class="vybrano">celkový podíl (počet) osob s více exekucemi</td><td class="right vybrano">' + nulaToNeposkytnuto((props["p2e" + rok.slice(2, 4)] + props["p3e" + rok.slice(2, 4)] + props["p4e" + rok.slice(2, 4)] + props["p5e" + rok.slice(2, 4)]) * 100 / props[POI + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p2e" + rok.slice(2, 4)] + props["p3e" + rok.slice(2, 4)] + props["p4e" + rok.slice(2, 4)] + props["p5e" + rok.slice(2, 4)]) + ')</td></tr>';
+      '<tr><td class="bold border_down">podíl (počet) osob s 1 exekucí</td><td class="bold border_down right">' + nulaToNeposkytnuto(props["p1e" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p1e" + rok.slice(2, 4)]) + ')</td></tr>' +
+      '<tr><td>podíl (počet) osob s 2 exekucemi</td><td class="right">' + nulaToNeposkytnuto(props["p2e" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p2e" + rok.slice(2, 4)]) + ')</td></tr>' +
+      '<tr><td>podíl (počet) osob s 3 – 9 exekucemi</td><td class="right">' + nulaToNeposkytnuto(props["p3e" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p3e" + rok.slice(2, 4)]) + ')</td></tr>' +
+      '<tr><td>podíl (počet) osob s 10 – 29 exekucemi</td><td class="right">' + nulaToNeposkytnuto(props["p4e" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p4e" + rok.slice(2, 4)]) + ')</td></tr>' +
+      '<tr><td class="border_down">podíl (počet) osob s 30 a více exekucemi</td><td class="right border_down">' + nulaToNeposkytnuto(props["p5e" + rok.slice(2, 4)] * 100 / props['poi' + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p5e" + rok.slice(2, 4)]) + ')</td></tr>' +
+      '<tr><td class="vybrano">celkový podíl (počet) osob s více exekucemi</td><td class="right vybrano">' + nulaToNeposkytnuto((props["p2e" + rok.slice(2, 4)] + props["p3e" + rok.slice(2, 4)] + props["p4e" + rok.slice(2, 4)] + props["p5e" + rok.slice(2, 4)]) * 100 / props['poi' + rok.slice(2, 4)]) + '% (' + nulaToNeposkytnuto(props["p2e" + rok.slice(2, 4)] + props["p3e" + rok.slice(2, 4)] + props["p4e" + rok.slice(2, 4)] + props["p5e" + rok.slice(2, 4)]) + ')</td></tr>';
   } else if (valIndi == "poi_poe") {
     if (valUj == "kraje") {
       t = '<table><tr><td class="grey bold">' + props.k.toUpperCase() + '</td><td class="right grey bold">' + rok + '</td></tr>';
@@ -634,7 +594,7 @@ function generateTooltip(feature) {
     t += '<tr><td>Exekučně vymáhaná jistina</td><td class="right">' + props["c" + rok.slice(2, 4)].toLocaleString('cs-CZ', {
         maximumFractionDigits: 0
       }) + ' Kč</td></tr>' +
-      '<tr><td class="vybrano">Průměrná jistina na osobu</td><td class="right vybrano">' + nulaToNeposkytnuto(props["c" + rok.slice(2, 4)] / props[POI + rok.slice(2, 4)]) + ' Kč</td></tr>';
+      '<tr><td class="vybrano">Průměrná jistina na osobu</td><td class="right vybrano">' + nulaToNeposkytnuto(props["c" + rok.slice(2, 4)] / props['poi' + rok.slice(2, 4)]) + ' Kč</td></tr>';
     if (rok == "2017") {
       t += '<tr><td>Medián jistiny na osobu</td><td class="right">' + (props["m" + rok.slice(2, 4)]).toLocaleString('cs-CZ', {
         maximumFractionDigits: 0
@@ -655,24 +615,24 @@ function generateTooltip(feature) {
         '<tr><td class="grey"><i>okres ' + props.r + ', ' + props.k + '</i></td><td class="right grey">&nbsp;</td><td class="right grey">&nbsp;</td><td class="right grey">&nbsp;</td></tr>';
     }
 
-    t += '<tr><td class="vybrano">Počet osob v exekuci</td><td class="right vybrano">' + nulaToNeposkytnuto(props[POI08]) + '</td><td class="right vybrano">' + nulaToNeposkytnuto(props[POI6]) + '</td>';
-    if ((props[POI08] - props[POI6]) >= 0) {
+    t += '<tr><td class="vybrano">Počet osob v exekuci</td><td class="right vybrano">' + nulaToNeposkytnuto(props['poi08']) + '</td><td class="right vybrano">' + nulaToNeposkytnuto(props['poe6']) + '</td>';
+    if ((props['poi08'] - props['poe6']) >= 0) {
       t += '<td class="right red vybrano">+';
     } else {
       t += '<td class="right green vybrano">'
     }
-    t += nulaToNeposkytnuto((props[POI08] / props[POI6] - 1) * 100, 1) + ' % ('
-    if ((props[POI08] - props[POI6]) >= 0) {
+    t += nulaToNeposkytnuto((props['poi08'] / props['poe6'] - 1) * 100, 1) + ' % ('
+    if ((props['poi08'] - props['poe6']) >= 0) {
       t += '+';
     }
-    t += nulaToNeposkytnuto(props[POI08] - props[POI6]) + ' osob)</td>';
-    t += '<tr><td>Podíl osob v exekuci</td><td class="right">' + nulaToNeposkytnuto(props[POI08] * 100 / props["o"], 2) + '% </td><td class="right">' + nulaToNeposkytnuto(props[POI6] * 100 / props["o"], 2) + '% </td>';
-    if ((props[POI08] - props[POI6]) >= 0) {
+    t += nulaToNeposkytnuto(props['poi08'] - props['poe6']) + ' osob)</td>';
+    t += '<tr><td>Podíl osob v exekuci</td><td class="right">' + nulaToNeposkytnuto(props['poi08'] * 100 / props["o"], 2) + '% </td><td class="right">' + nulaToNeposkytnuto(props['poe6'] * 100 / props["o"], 2) + '% </td>';
+    if ((props['poi08'] - props['poe6']) >= 0) {
       t += '<td class="right red">+';
     } else {
       t += '<td class="right green">'
     }
-    t += nulaToNeposkytnuto((props[POI08] - props[POI6]) * 100 / props["o"], 2) + ' p.b.</td></tr>' +
+    t += nulaToNeposkytnuto((props['poi08'] - props['poe6']) * 100 / props["o"], 2) + ' p.b.</td></tr>' +
       '<tr><td>Celkový počet exekucí</td><td class="right">' + nulaToNeposkytnuto(props["pe7"]) + '</td><td class="right">' + nulaToNeposkytnuto(props["pe6"]) + '</td>';
     if ((props["pe7"] - props["pe6"]) >= 0) {
       t += '<td class="right red">+';
@@ -684,17 +644,17 @@ function generateTooltip(feature) {
       t += '+';
     }
     t += nulaToNeposkytnuto(props["pe7"] - props["pe6"]) + ' exekucí)</td></tr>' +
-      '<tr><td>Průměrný počet exekucí na osobu</td><td class="right">' + nulaToNeposkytnuto(props["pe7"] / props[POI08], 1) + '</td><td class="right">' + nulaToNeposkytnuto(props["pe6"] / props[POI6], 1) + '</td>';
-    if (nulaToNeposkytnuto(props["pe7"] / props[POI08], 3) >= nulaToNeposkytnuto(props["pe6"] / props[POI6], 3)) {
+      '<tr><td>Průměrný počet exekucí na osobu</td><td class="right">' + nulaToNeposkytnuto(props["pe7"] / props['poi08'], 1) + '</td><td class="right">' + nulaToNeposkytnuto(props["pe6"] / props['poe6'], 1) + '</td>';
+    if (nulaToNeposkytnuto(props["pe7"] / props['poi08'], 3) >= nulaToNeposkytnuto(props["pe6"] / props['poe6'], 3)) {
       t += '<td class="right red">+';
     } else {
       t += '<td class="right green">';
     }
-    t += nulaToNeposkytnuto(((props["pe7"] / props[POI08]) / (props["pe6"] / props[POI6]) - 1) * 100, 1) + ' % (';
-    if ((props["pe7"] / props[POI08]) >= (props["pe6"] / props[POI6])) {
+    t += nulaToNeposkytnuto(((props["pe7"] / props['poi08']) / (props["pe6"] / props['poe6']) - 1) * 100, 1) + ' % (';
+    if ((props["pe7"] / props['poi08']) >= (props["pe6"] / props['poe6'])) {
       t += '+';
     }
-    t += nulaToNeposkytnuto((props["pe7"] / props[POI08]) - (props["pe6"] / props[POI6]), 1) + ')</td></tr>';
+    t += nulaToNeposkytnuto((props["pe7"] / props['poi08']) - (props["pe6"] / props['poe6']), 1) + ')</td></tr>';
   }
 
 
@@ -721,7 +681,6 @@ comparing.onRemove = function(map) {
 
 comparing.update = function() {
   if (isComparing) {
-
     comparing._div.innerHTML = '';
     if (comparingList.length > 0) {
       var div = L.DomUtil.create('div', 'uj');
@@ -734,7 +693,6 @@ comparing.update = function() {
       } else if (valUj == "obce") {
         heading = '<b>Obec ' + rok + '</b><br /><br /><br />';
       }
-
       t = heading + '<b>podíl osob v exekuci</b>'
       if (rok == "2017") {
         t += '<br />meziroční změna počtu osob v exekuci';
@@ -756,7 +714,6 @@ comparing.update = function() {
         'počet osob v exekuci<br />' +
         'celkový počet exekucí<br />';
       if (rok == "2017") {
-
         t+='<div class="struktura"><u>detail osob v exekuci</u></div>' +
         '<div class="struktura">podíl dětí a mladistvých<br />' +
         'podíl osob ve věku 18 až 29 let<br />' +

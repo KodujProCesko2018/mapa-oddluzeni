@@ -447,7 +447,6 @@ L.PhotonReverse = L.PhotonBase.extend({
 
     _handleResults: function (data) {
         /*eslint-disable no-console */
-        console.log(data);
         /*eslint-enable no-alert */
     },
 
