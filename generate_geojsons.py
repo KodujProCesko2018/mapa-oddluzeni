@@ -13,7 +13,7 @@ geojson = {
     'okres': requests.get('http://mapaexekuci.cz/mapa/okresy.geojson').json()
 }
 
-for y in range(2008, 2011):
+for y in [2017]:
     # kraj
     q = """select nazev_kraj, COUNT(rc) from (select DISTINCT nazev_kraj, rc
     FROM rok%d LEFT OUTER JOIN ruian ON ruian.psc = CAST(rok%d.psc AS TEXT)
@@ -56,6 +56,6 @@ for y in range(2008, 2011):
         else:
             item['properties']['poi' + str(y)[2:]] = 0
 
-json.dump(geojson['kraj'], open('json/kraje_2008_2010.geojson', 'w'))
-json.dump(geojson['okres'], open('json/okresy_2008_2010.geojson', 'w'))
-json.dump(geojson['obec'], open('json/obce_2008_2010.geojson', 'w'))
+json.dump(geojson['kraj'], open('json/kraje_2017.geojson', 'w'))
+json.dump(geojson['okres'], open('json/okresy_2017.geojson', 'w'))
+json.dump(geojson['obec'], open('json/obce_2017.geojson', 'w'))

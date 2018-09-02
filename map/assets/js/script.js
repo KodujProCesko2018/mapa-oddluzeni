@@ -5,7 +5,8 @@ const POE = 'poe';
 const POE7 = 'poe7';
 const POE6 = 'poe6';
 
-var rok = "2008";
+//var rok = "2008";
+var rok = "2017";
 var valUj = "kraje";
 var valIndi = "poi";
 var viewPrehled = 0;
@@ -14,6 +15,7 @@ var lOkresy;
 var detail = 0;
 var autoLayer = true;
 var isComparing = false;
+
 var map = L.map('map', {
   zoomControl: false,
   doubleClickZoom: false
@@ -22,17 +24,15 @@ map.createPane('obrysy');
 map.getPane('obrysy').style.zIndex = 550;
 map.getPane('obrysy').style.pointerEvents = 'none';
 
-
-   L.Control.include({
-     _refocusOnMap: L.Util.falseFn // Do nothing.
-   });
-
-
+L.Control.include({
+  _refocusOnMap: L.Util.falseFn // Do nothing.
+});
 
 base = L.tileLayer('https://api.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic291a3VwbWEiLCJhIjoiMGVjMjZjMWZmYzM1YjAxZDYwMmViNWU4NTQzZWNmYjUifQ.t-OJ7Re1gQXfP1vpY1ASVA', {
   minZoom: 5,
   maxZoom: 13,
-  attribution: 'Podkladová mapa &copy; <a href="https://www.mapbox.com/">Mapbox</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, zdroj dat <a href="http://www.ekcr.cz/">Exekutorská komora ČR</a>, tvůrce mapy <a href="http://www.matejsoukup.eu/">Matěj Soukup</a>',
+  //attribution: 'Podkladová mapa &copy; <a href="https://www.mapbox.com/">Mapbox</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, zdroj dat <a href="http://www.ekcr.cz/">Exekutorská komora ČR</a>, tvůrce mapy <a href="http://www.matejsoukup.eu/">Matěj Soukup</a>',
+  attribution: 'Podkladová mapa &copy; <a href="https://www.mapbox.com/">Mapbox</a>, &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, zdroj dat <a href="https://isir.justice.cz/">Insolvenční rejstřík</a>, tvůrce mapy <a href="http://www.matejsoukup.eu/">Matěj Soukup</a>',
   mapid: 'soukupma.68f89de5'
 });
 
@@ -52,6 +52,7 @@ L.control.zoom({
   position: 'bottomright'
 }).addTo(map);
 
+/*
 var icko = L.control({
   position: 'bottomright'
 });
@@ -89,8 +90,7 @@ icko.sbal = function() {
   icko._div.innerHTML = '<a id="icko_rozbal" onclick="icko.rozbal()" href="#" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANOSURBVGhD7dlJyE1xHMbx15wMKcPCwspQosRCiR0bhOxQWIgdkQVhgQUZVpRiYSjTwsJYEtmQZAoRC0IiMhTKzPdZ3Hq7Pe85/+Hce6X3qc+C/r9z733vPf/hd9o6859nOOZjMw7jJC7gLI5jO5ZgArrhn8pE7MIL/InwHscwAz3QknTFXNyAe5Ox9EdYjt5oWsbhKtwbyvUMs9HQ6FtYjx9wb6JKur/6o/L0xTm4F22Ux9DkUVkG4TrcizXaa4xHdvRNXIN7kWZ5g6xvRvfEebiLx/qNl0i9vzQJDERS1sFdNNY+1N5EL6zGN7ixRc6gC6KiKfYn3AVjnIDLWrjxZZYhOPrUVa0TWrVdhsCNL/MOgxEUrdjuIimmwmUA3PgQOxGUqrYdshcuS+HGh/gELQmF0QbQFefYgJ6oZR4+w40NtQqF2Q1XmOsjtKi+avd/OW6jMLFb8VYaBhutnq7gX7UYNgvgCmL8gk6EOltMwhhMx0bo5+VqUu2BzSa4glA7MBQdZSS0DrjaFJdgcwiuIIR2AaMwB5qVtOC56Dzj6lM8gc0puIIQ+iD6WdX+fQcu09C+LscH2FyEK0ihRctlJtz4FPrj2Wh36QpSPISLJgE3PoUmD5ujcAUpDsIl5z6spzXPZhtcQYqFqI921TpcufEptEO3UQfQFcTSTe9mLZ1x3PhUB2CjNqYriHUTLmvgxqfS/WajXqzamK4ohvq+Lpfhxqcaiw6jXqwrijEZ9VE35jvc+BTPUXh+z53nv8I1pKtcCGULCtMd+rSuOMRduFS5fmgyGYHSrIC7QIiONnI60bnxKfScJShq7ash5i5S5h5ctCvWzuE+TiN1X6f7bDSCo12su1CIKSjLfrjaMlq0o3ME7mJl3mIW6mcVtYDUPUntmT1AH0SnHx7BXTSEPtAV6PnhLeQ8V/kCnTaTo3O8uuHu4s2i7bq+4ezo+USrPoy+xUWoLDrGPoV7sUZRE08LdOXRo4EqD19FdDDLuifKoplIrf0quyHt6aekKTZpdkqJmsjqiuf2cGu07dCGNWqxqzL6ua2EuibuDZbRDmIrgvZOzYp6sZph1AFUR0Z9J51v9NdWo0BnbD1Y1aqu/ZzOE4Vb8c50puVpa/sLVe+J6OGq49MAAAAASUVORK5CYII=" width="35px"></a>';
 };
 
-
-
+*/
 
 var prehled = L.control({
   position: 'topleft'
@@ -109,8 +109,6 @@ prehled.onAdd = function(map) {
 };
 
 //prehled.addTo(map);
-
-
 
 var zrusit = L.control({
   position: 'topright'
@@ -158,7 +156,6 @@ var photonControlOptions = {
 
 var searchControl = L.control.photon(photonControlOptions);
 searchControl.addTo(map);
-
 
 var searchPoints = L.geoJson(null, {
   onEachFeature: function(feature, layer) {

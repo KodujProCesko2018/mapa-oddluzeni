@@ -4,11 +4,11 @@ const poiChangeBreaks = [-8, -4,0, 4, 8];
 
 const breaks = {
   poi: {
-    title: "Podíl osob v insolvenci (%)",
+    title: "Počet osob v oddlužení",
     step: 1,
     decimals: 0,
     kraje: {
-      breaks: [10, 30, 50, 100, 200],
+      breaks: [1000, 3000, 5000, 10000, 15000],
       colors: poiColors
     },
     okresy: {
