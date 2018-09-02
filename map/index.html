@@ -1,175 +1,105 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Mapa</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="leaflet.css" />
+        <link rel="stylesheet" href="leaflet.photon.css" />
+        <link rel="stylesheet" href="app.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha256-kdEnCVOWosn3TNsGslxB8ffuKdrZoGQdIdPwh7W1CsE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js" integrity="sha256-kmsDsaE/T0gIJXfV7sZF1SwQAdO2AU5DAkZwwnx46n4=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js" integrity="sha256-PieqE0QdEDMppwXrTzSZQr6tWFX3W5KkyRVyF1zN3eg=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.Spin/1.1.0/leaflet.spin.min.js" integrity="sha256-KT7wva6UUkBy5G7XBYA3/u7axZJEhcEh8/2WeTk2F48=" crossorigin="anonymous"></script>
+        <!--<script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>-->
+        <script src="leaflet.photon.js"></script>
+        <!--GOOGLE Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=latin-ext" rel="stylesheet">
+        <!--Boostrap core CSS-->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!--FONT AWESOME Icons-->        
+        <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-light menu">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo-nove.png" class="logoimg"></a>
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <div class="menuikony row">
+                             <i class="fa fa-question menuquestionmark menuikonyjednotlive"></i>
+                        <i class="fa fa-map-marker menuikonyjednotlive"></i>
+                        <i class="fa fa-search menuikonyjednotlive"></i>
+                    </div>
+                </div>
+            </nav>
+        </section>
 
-<head>
-
-	<title>Mapa</title>
-
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="leaflet.css" />
-	<link rel="stylesheet" href="leaflet.photon.css" />
-	<link rel="stylesheet" href="app.css" />
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha256-kdEnCVOWosn3TNsGslxB8ffuKdrZoGQdIdPwh7W1CsE=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js" integrity="sha256-kmsDsaE/T0gIJXfV7sZF1SwQAdO2AU5DAkZwwnx46n4=" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js" integrity="sha256-PieqE0QdEDMppwXrTzSZQr6tWFX3W5KkyRVyF1zN3eg=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.Spin/1.1.0/leaflet.spin.min.js" integrity="sha256-KT7wva6UUkBy5G7XBYA3/u7axZJEhcEh8/2WeTk2F48=" crossorigin="anonymous"></script>
-	<!--<script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>-->
-
-	<script src="leaflet.photon.js"></script>
-
-	<!--GOOGLE Fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;subset=latin-ext" rel="stylesheet">
-	
-	<!--Boostrap core CSS-->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	
-	<!--FONT AWESOME Icons-->	
-	<link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
-
-</head>
-
-<body>
-<!--Header-->
-<section>
-	<nav class="navbar navbar-expand-lg navbar-light menu">
-	<a class="navbar-brand" href="#"><img src="assets/img/logo-nove.png" class="logoimg"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div id='right'>
+            <p class="sidebarnadpis">Roky</p>
+            <div class="row">
+                <a id="year_17" class="year sidebarrokyaktualni" title="2017" href="#">2017</a>
+                <a id="year_16" class="year sidebarrokyminule" title="2016" href="#">2016</a>
+                <a id="year_15" class="year sidebarrokyminule" title="2015" href="#">2015</a>
+                <a id="year_14" class="year sidebarrokyminule" title="2014" href="#">2014</a>
+                <a id="year_13" class="year sidebarrokyminule" title="2013" href="#">2013</a>
+                <a id="year_12" class="year sidebarrokyminule" title="2012" href="#">2012</a>
+                <a id="year_11" class="year sidebarrokyminule" title="2011" href="#">2011</a>
+                <a id="year_10" class="year sidebarrokyminule" title="2010" href="#">2010</a>
+                <a id="year_09" class="year sidebarrokyminule" title="2009" href="#">2009</a>
+                <a id="year_08" class="year sidebarrokyminule" title="2008" href="#">2008</a>
+            </div>
+            <form id="hodnota">
+                <p class="sidebarnadpis">Možnosti ukazatelů mapy:</p>
+                <div class="row">
+                    <input id="rad_poi" type="radio" name="indi" value="poi" checked="checked" /><label for="rad_poi"><p class="sidebartext"> Podíl osob v insolvenci</p></label>
+                </div>
+                <div class="row">
+                    <input id="rad_poi_poe" type="radio" name="indi" value="poi_poe" /><label for="rad_poi_poe"> <p class="sidebartext">Poměr insolvencí na exekuce</p></label>
+                </div>
+                <p class="sidebarnadpis">Meziroční změny:</p>
+                <input id="rad_poe_change" type="radio" name="indi" value="poe_change" /><label for="rad_poe_change"> <p class="sidebartext">2018 vs. 2017</p></label>
+            </form>
+            <a id="reset_view" onclick="resetView()" href="#" style="outline: none;">Zobrazit celou ČR</a>
+            <br />
+            <div id="legenda"></div>
+        </div>
+        <div id='container'>
+            <div id='map_sipka'>
+                <div id='sipka'>
+                    <span id='sipka_span'>
+                        <svg enable-background="new 0 0 26 26" height="26px" id="arrow_left" version="1.1" viewBox="0 0 26 26" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#91375E" points="23.885,0.58 25.969,2.664 15.133,13.5 25.969,24.336 23.885,26.42 10.965,13.5  "/><polygon fill="#91375E" points="12.885,0.58 14.969,2.664 4.133,13.5 14.969,24.336 12.885,26.42 -0.035,13.5  "/></g></svg>
+                        <svg enable-background="new 0 0 26 26" height="26px" id="arrow_right" version="1.1" viewBox="0 0 26 26" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#91375E" points="2.049,0.58 -0.035,2.664 10.801,13.5 -0.035,24.336 2.049,26.42 14.969,13.5  "/><polygon fill="#91375E" points="13.049,0.58 10.965,2.664 21.801,13.5 10.965,24.336 13.049,26.42 25.969,13.5  "/></g></svg>
+                    </span>
+                </div>
+                <div id='map'></div>
+            </div>
+        </div>
+        
+        <i class="fa fa-question menuquestionmark menuikonyjednotlive"></i>
+        
+        <div class="menuikonytelefon row">
+            <i class="fa fa-search menuikonyjednotlive"></i><br/>
+            <i class="fa fa-map-marker menuikonyjednotlive"></i><br/>
+            <i class="fa fa-filter menuikonyjednotlive"></i>
+        </div>
     
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menulist">
-    </ul>
-    <div class="menuikony row">
-     	<i class="fa fa-question menuquestionmark menuikonyjednotlive"></i>
-		<i class="fa fa-map-marker menuikonyjednotlive"></i>
-		<i class="fa fa-search menuikonyjednotlive"></i>
-    </div>
-    
-  </div>
-</nav>
-</section>
-
-<!--Mapa-->
-	<div id='right'>
-		<p class="sidebarnadpis">Roky</p>
-		<div class="row">
-			<a id="year_10" class="year sidebarrokyminule" title="2010" href="#">2010</a>
-			<a id="year_09" class="year sidebarrokyminule" title="2009" href="#">2009</a>
-			<a id="year_08" class="year sidebarrokyaktualni" title="2008" href="#">2008</a>
-
-								<!--<select class="form-control form-control-sm sidebarrokyvyber">
-									<option><a id="year_16" class="year sidebarrokyminule" title="2016" href="#">2016</a></option>
-									<option><a id="year_15" class="year sidebarrokyaktualni" title="2015" href="#">2015</a></option>
-									<option><a id="year_14" class="year sidebarrokyaktualni" title="2014" href="#">2014</a></option>
-									<option><a id="year_13" class="year sidebarrokyaktualni" title="2013" href="#">2013</a></option>
-									<option><a id="year_12" class="year sidebarrokyaktualni" title="2012" href="#">2012</a></option>
-									<option><a id="year_11" class="year sidebarrokyaktualni" title="2011" href="#">2011</a></option>
-									<option><a id="year_10" class="year sidebarrokyaktualni" title="2010" href="#">2010</a></option>
-									<option><a id="year_09" class="year sidebarrokyaktualni" title="2009" href="#">2009</a></option>
-									<option><a id="year_09" class="year sidebarrokyaktualni" title="2008" href="#">2008</a></option>
-								</select>-->
-		</div>
-		<!--<br /><br />
-		<a id="year_change" class="year change" title="year_change" href="#">meziroční změna</a>-->
-
-		
-		<form id="hodnota">
-			<p class="sidebarnadpis">Možnosti ukazatelů mapy:</p>
-			<div class="row">
-			<input id="rad_poi" type="radio" name="indi" value="poi" checked="checked" /><label for="rad_poi"><p class="sidebartext"> Podíl osob v insolvenci</p></label>
-			</div>
-			<div class="row">
-			<input id="rad_poi_poe" type="radio" name="indi" value="poi_poe" /><label for="rad_poi_poe"> <p class="sidebartext">Poměr insolvencí na exekuce</p></label>
-			
-			</div>
-			<p class="sidebarnadpis">Meziroční změny:</p>
-			<input id="rad_poe_change" type="radio" name="indi" value="poe_change" /><label for="rad_poe_change"> <p class="sidebartext">2018 vs. 2017</p></label>
-			</form>
-			<!--<form id="uzemi">
-			<p class="sidebarnadpis">Uzemí:</p>
-			<div class="row">
-			<input id="rad_auto" type="radio" name="uj" value="auto" checked="checked" /><label for="rad_auto"><p class="sidebartext"> Automaticky - <span id="uj_auto">kraje</span></p></label>
-			</div>
-			<div class="row">
-			<input id="rad_kraje" type="radio" name="uj" value="kraje" /><label for="rad_kraje"><p class="sidebartext"> Kraje</p></label>
-			</div>
-			<div class="row">
-			<input id="rad_okresy" type="radio" name="uj" value="okresy" /><label for="rad_okresy"><p class="sidebartext"> Okresy</p></label>
-			</div>
-			<div class="row">
-			<input id="rad_obce" type="radio" name="uj" value="obce" /><label for="rad_obce"><p class="sidebartext"> Obce</p></label>
-			</div>
-		</form>-->
-		<br />
-		<a id="reset_view" onclick="resetView()" href="#" style="outline: none;">Zobrazit celou ČR</a>
-		<br />
-		<!--<b>Vyhledání obce</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a title="Resetovat" href="#" onclick="Resetovat();return false;">resetovat</a><br>
-		<select id="krajeSelect" onchange="onKrajeSelect(this.value)" style="outline: none;">
-			<option value="null" disabled="">Vyber kraj</option>
-			<option value="0">Hlavní město Praha</option>
-			<option value="2">Jihočeský kraj</option>
-			<option value="10">Jihomoravský kraj</option>
-			<option value="4">Karlovarský kraj</option>
-			<option value="9">Kraj Vysočina</option>
-			<option value="7">Královéhradecký kraj</option>
-			<option value="6">Liberecký kraj</option>
-			<option value="13">Moravskoslezský kraj</option>
-			<option value="11">Olomoucký kraj</option>
-			<option value="8">Pardubický kraj</option>
-			<option value="3">Plzeňský kraj</option>
-			<option value="1">Středočeský kraj</option>
-			<option value="5">Ústecký kraj</option>
-			<option value="12">Zlínský kraj</option>
-		</select><br>
-		<select id="okresySelect" onchange="onOkresySelect(this.value)" style=""></select><br>
-		<select id="obceSelect" onchange="onObceSelect(this.value)"></select></div>-->
-<hr />
-		<div id="legenda"></div>
-	</div>
-	<div id='container'>
-		<div id='map_sipka'>
-
-			<div id='sipka'>
-				<span id='sipka_span'>
-		<svg enable-background="new 0 0 26 26" height="26px" id="arrow_left" version="1.1" viewBox="0 0 26 26" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#91375E" points="23.885,0.58 25.969,2.664 15.133,13.5 25.969,24.336 23.885,26.42 10.965,13.5  "/><polygon fill="#91375E" points="12.885,0.58 14.969,2.664 4.133,13.5 14.969,24.336 12.885,26.42 -0.035,13.5  "/></g></svg>
-		<svg enable-background="new 0 0 26 26" height="26px" id="arrow_right" version="1.1" viewBox="0 0 26 26" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#91375E" points="2.049,0.58 -0.035,2.664 10.801,13.5 -0.035,24.336 2.049,26.42 14.969,13.5  "/><polygon fill="#91375E" points="13.049,0.58 10.965,2.664 21.801,13.5 10.965,24.336 13.049,26.42 25.969,13.5  "/></g></svg>
-	</span>
-			</div>
-			<div id='map'></div>
-		</div>
-	</div>
-	
-	
-	<!--Spodní menu telefony======================================-->
-	
-	
-	<i class="fa fa-question menuquestionmark menuikonyjednotlive"></i>
-	
-	
-	<div class="menuikonytelefon row">
-     <i class="fa fa-search menuikonyjednotlive"></i><br/> <i class="fa fa-map-marker menuikonyjednotlive"></i> <br/> <i class="fa fa-filter menuikonyjednotlive"></i>
-    </div>
-    
-    
-	<!--BOOSTRAP CORE JAVASCRIPT======================================-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/breaks.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/breaks.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
