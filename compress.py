@@ -1,28 +1,24 @@
 #!/usr/bin/env python
 
-o = open('records.csv', 'a')
-
 import sys
+import xml.sax
 
-from xml.sax.handler import ContentHandler
-import xml.sax
-import xml.parsers.expat
-import ConfigParser
-import xml.sax
+of = sys.argv[1]
+o = open(of, 'a')
 
 class Exact(xml.sax.handler.ContentHandler):
   def __init__(self):
       pass
 
   def startElement(self, name, attrs):
-    o.write(name + ':')
+      o.write(name + '::')
 
   def endElement(self, name):
-    o.write(';;')
-    pass
+      o.write(';;')
+      pass
 
   def characters(self, data):
-    o.write(data.encode('utf-8'))
+      o.write(data.encode('utf-8'))
 
 handler = Exact()
 
