@@ -29,11 +29,6 @@ def updobj(old, new):
             old[k] = new[k]
 
 wrong_lines = 0
-kody_zacatek = [174, 175]
-kody_konec = [177, 178]
-
-year_konce = {}
-year_month_konce = {}
 
 for line in sys.stdin:
     columns = line.split('\t')
@@ -50,7 +45,6 @@ for line in sys.stdin:
     kod = int(kod)
     akce = KODY.get(kod, '???NEZNAMA AKCE???')
     ins = ins[4:]
-    y, m = publish[:7].split('-')
     if ins not in insolvence:
         insolvence[ins] = {
             'start': '',
@@ -67,20 +61,16 @@ for line in sys.stdin:
     puvodce = d.get('idOsobyPuvodce', '')
     if puvodce:
         insobj['puvodci'].add(puvodce)
-
     # pocatek insolvence
     if kod in [174, 175]:
         insobj['start'] = publish
         insobj['start_type'] = kod
-        print "START", publish, kod, ins
     # konec insolvence
     elif kod in [177, 178]:
         assert ins in insolvence
         insobj['end'] = publish
         insobj['end_type'] = kod
-        print 'KONEC', publish, kod, ins, d
-        year_konce.setdefault(y, []).append(insobj)
-        year_month_konce.setdefault((y, m), []).append(insobj)
+        print 'KONEC', publish, kod, ins
     elif kod == 2:
         id = d.get('idOsoby')
         idadresy = d.get('idAdresy', '')
@@ -110,7 +100,11 @@ for line in sys.stdin:
         assert id
         ic = d.get('ic', '')
         rc = d.get('rc', '')
-        rn = rc and int(rc[:2]) or 0
+        try:
+            rn = rc and int(rc[:2]) or 0
+        except ValueError, e:
+            rn = 0
+            rc = ''
         if rn:
             rn = rn < 18 and 2000+rn or 1900+rn
             vek = 2018-rn
@@ -132,7 +126,6 @@ for line in sys.stdin:
             osoby[id] = {}
         else:
             updobj(osoby[id], obj)
-       
         if role.startswith('D'):
             insobj['dluznici'].add(id)
         elif role.startswith('V'):
@@ -140,20 +133,21 @@ for line in sys.stdin:
         elif role.startswith('SPR'):
             insobj['spravci'].add(id)
         else:
-            raise Exception('ROLE?' + role + ins)
-    elif kod in [4, 5, 184]:
-        # ignore
-        continue
-    #else:
-        #if len(d.keys()) > 2:
-            #print kod, akce, d
+            print 'UNKNOWN ROLE:', role
 
-for ins in insolvence:
-    print ins, insolvence[ins]
+# output statistics
 
-print '='*60
-
-for os in osoby:
-    print os, osoby[os]
-
+with open('year-start-end.csv', 'w') as yse:
+    dstart, dend = {}, {}
+    for ins in insolvence:
+        starts = insolvence[ins]['start']
+        ends = insolvence[ins]['end']
+        try:
+            y, m = int(data[:4]), int(data[5:7])
+        except ValueError:
+            continue
+        if starts:
+            dstart.setdefault(y, 0)
+            dstart[y] += 1
+        d.setdefault(y, 0)
 print 'Wrong lines', wrong_lines
