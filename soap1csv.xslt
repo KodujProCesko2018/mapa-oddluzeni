@@ -13,6 +13,8 @@
               <xsl:text>	</xsl:text>
           <xsl:value-of select="spisovaZnacka" />
               <xsl:text>	</xsl:text>
+          <xsl:value-of select="popisUdalosti" />
+              <xsl:text>	</xsl:text>
           <xsl:value-of select="poznamka" />
 <xsl:text>
 </xsl:text>
